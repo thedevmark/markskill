@@ -1,4 +1,4 @@
 interface:
   display_name: "Restraint Framework"
-  short_description: "Restraint framework for everything an agent ships: UI, copy, assets, verification claims"
-  default_prompt: "Use $restraint-framework to critique or revise this product surface without generic AI copy, decorative UI defaults, invented claims, or unnecessary redesign."
+  short_description: "Lean code, clear UI, grounded copy, honest verification"
+  default_prompt: "Use $restraint-framework to simplify this implementation and product surface without changing its job, inventing claims, or skipping verification."

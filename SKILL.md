@@ -1,6 +1,6 @@
 ---
 name: restraint-framework
-description: Restraint framework for coding agents, applied to everything they ship that a human sees and every claim they make about verification - interfaces, dashboards, landing pages, promotional assets, store screenshots, thumbnails, charts, diagrams, slides, docs, interface copy, and marketing copy, across creating, critiquing, revising, and reporting. Use when creating or revising React/CSS UI, layouts, design systems, data visualizations, interface copy, or marketing copy inside a design; when work feels generic, AI-made, over-carded, over-written, glowy, decorative, unclear, or templated; or when the user asks for anti-slop, taste, hierarchy, density, typography, palette, interaction, accessibility, content design, human-sounding copy, critique, audit, clarify, distill, harden, polish, bolder, quieter, or surgical visual refinement.
+description: Restraint framework for coding agents, applied to implementation, everything they ship that a human sees, and every claim they make about verification - code, dependencies, abstractions, interfaces, dashboards, landing pages, promotional assets, charts, docs, interface copy, and marketing copy, across creating, fixing, critiquing, revising, and reporting. Use when adding, reviewing, simplifying, or refactoring code; choosing dependencies or architecture; revising UI, layouts, visualizations, or copy; when work feels over-engineered, generic, AI-made, over-carded, over-written, decorative, unclear, or templated; or when the user asks for restraint, anti-slop, YAGNI, minimal implementation, taste, hierarchy, accessibility, clarify, distill, harden, polish, bolder, quieter, or surgical refinement.
 ---
 
 # Restraint Framework
@@ -47,6 +47,8 @@ Then choose the smallest refinement intent that matches the request:
 Do not run every intent by default. Use critique for human judgment about hierarchy and meaning; use audit for mechanical evidence such as semantics, contrast, overflow, state coverage, and implementation drift. A comprehensive review needs both, kept distinct until synthesis.
 
 Read `references/promotional-assets-and-feedback.md` for store listing art, promo tiles, thumbnails, screenshot carousels, ads, social graphics, product demonstrations, or an iterative revision where the user has already established visual rules.
+
+Read `references/code-restraint.md` whenever the task adds, fixes, refactors, reviews, or removes implementation; changes a dependency; introduces an abstraction; or moves behavior between layers. Trace the real flow before applying its implementation ladder.
 
 ## Keep context-heavy work in one thread
 
@@ -177,6 +179,8 @@ Automated accessibility checks are evidence, not proof. Pair them with keyboard,
 
 ### 8. Implement and verify
 
+For code changes, use the implementation ladder in `references/code-restraint.md` after locating the behavior's real owner and callers. Optimize for the smallest coherent change, not the smallest line count.
+
 1. Name the high-noise elements with selectors, components, annotations, or tight file references.
 2. Make surgical edits when the structure works. Rebuild only when the structure itself is the problem and the scope permits it.
 3. Render the result when possible. Inspect desktop and mobile together in one batched pass, including short and long content; add wide or intermediate layouts when the surface needs them.
@@ -191,9 +195,9 @@ If feedback reveals that the concept is wrong rather than merely unpolished, sto
 
 ## Prioritize findings
 
-- **P0 — truth, task, or access failure:** fabricated claim, misleading state, hidden recovery, broken interaction, unreadable content, or accessibility blocker.
-- **P1 — hierarchy or convergence failure:** unclear primary action, card soup, repeated navigation concepts, template-shaped layout, interchangeable copy, or every element competing equally.
-- **P2 — polish failure:** weak optical alignment, inconsistent rhythm, unnecessary effect, awkward wrap, or minor copy friction.
+- **P0 — truth, task, safety, or access failure:** fabricated claim, broken behavior, lost validation, misleading state, hidden recovery, unreadable content, or accessibility blocker.
+- **P1 — ownership, complexity, hierarchy, or convergence failure:** symptom patch, duplicated implementation, speculative abstraction, unearned dependency, unclear primary action, card soup, or template-shaped output.
+- **P2 — local clarity or polish failure:** confusing name, needless wrapper, weak optical alignment, inconsistent rhythm, unnecessary effect, awkward wrap, or minor copy friction.
 
 Fix P0 before P1 and P1 before P2. Do not spend the pass polishing decoration while the page's job remains unclear.
 
@@ -222,3 +226,4 @@ For a new design, briefly state the audience, page job, chosen direction, and si
 - Did the revision preserve the working product underneath it?
 - Did the revision preserve every accepted user decision that remains in scope, including the semantic role of each font, color, asset, and text level?
 - If work was delegated, was it genuinely independent, evidence-backed, and reconciled against the primary context?
+- For code changes, is this the smallest coherent implementation at the correct owner, with every necessary guard and proportionate regression evidence intact?
