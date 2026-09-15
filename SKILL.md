@@ -48,6 +48,30 @@ Do not run every intent by default. Use critique for human judgment about hierar
 
 Read `references/promotional-assets-and-feedback.md` for store listing art, promo tiles, thumbnails, screenshot carousels, ads, social graphics, product demonstrations, or an iterative revision where the user has already established visual rules.
 
+## Keep context-heavy work in one thread
+
+Default to direct execution when the work depends on accumulated judgment. Do not delegate merely because parallelism is available.
+
+Keep the work with the primary agent when it:
+
+- depends on prior decisions, rejected directions, user corrections, or a decision ledger;
+- requires several changes to stay coherent across the same architecture, files, or visual system;
+- is small or straightforward enough to complete directly;
+- would make another agent reread substantially the same context; or
+- cannot be reviewed from durable artifacts, diffs, test output, or source evidence.
+
+Use subagents only for bounded, independent work with a clear return contract. Read-heavy inventory, source lookup, and isolated audit passes are good candidates when their outputs can be checked without trusting a compressed summary. Partition file ownership before parallel implementation; overlapping edits and primary design decisions stay with one agent.
+
+When delegation is justified:
+
+- pass the relevant raw constraints and canonical references, not only a paraphrase;
+- require locations, evidence, assumptions, and unresolved questions in the result;
+- inspect the cited source, produced artifact, diff, and verification output in the primary thread;
+- reconcile the result against the full decision ledger before accepting or implementing it; and
+- stop delegating when coordination, duplicated reading, or review costs exceed the saved time.
+
+A subagent report is input, not verification. Never turn its summary into a claim about code, rendered quality, tests, or production state without checking the underlying evidence.
+
 ## Run the eight-pass workflow
 
 ### 1. Ground the artifact
@@ -197,3 +221,4 @@ For a new design, briefly state the audience, page job, chosen direction, and si
 - Does it feel specific to this product rather than transferable to any startup?
 - Did the revision preserve the working product underneath it?
 - Did the revision preserve every accepted user decision that remains in scope, including the semantic role of each font, color, asset, and text level?
+- If work was delegated, was it genuinely independent, evidence-backed, and reconciled against the primary context?

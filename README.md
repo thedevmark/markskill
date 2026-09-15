@@ -29,6 +29,7 @@ The claim is "every part of the process that ships a surface." Check it against 
 | Survives real use | SKILL.md pass 7 — keyboard, focus, states, zoom, reduced motion |
 | Honest about what was verified | `references/evidence-and-testing.md` — labeled evidence; never claim a render or test that did not happen |
 | Iterates without thrashing | decision ledger, one coherent batch plus one confirmation pass, feedback handling in `references/promotional-assets-and-feedback.md` |
+| Protects accumulated context | direct execution for context-heavy or tightly coordinated work; evidence-backed delegation only for bounded, independent tasks |
 
 The boundary, stated plainly: this governs surfaces and verification honesty — UI, copy, assets, and reporting. It is not a backend linter and does not review your algorithms. "Every part of the development process" means every part a human sees, plus every claim about what happened.
 
