@@ -30,7 +30,7 @@ Before styling, identify:
 - existing tokens and components;
 - density target;
 - visual direction in concrete terms;
-- one subject-derived signature element;
+- a subject-derived signature element when useful;
 - one intentional risk or exception, if any.
 
 The signature should come from the subject, data, interaction, or brand history—not from a stock AI motif.
@@ -117,7 +117,7 @@ No tell is automatically wrong. Flag it when it is repeated, unearned, inconsist
 - A common font is not a failure when it is established, performant, legible, or intentionally neutral.
 - Add a display face only when it creates useful identity and the implementation can support it.
 - Keep a coherent type scale and readable line length.
-- Use monospace for code, identifiers, timestamps, or data roles—not as generic "technical" decoration.
+- Use monospace for code, identifiers, timestamps, data, or an established brand-voice role. Preserve authored typography roles; avoid generic "technical" decoration.
 - Use tabular numerals for aligned comparisons.
 - Check real wraps, widows, truncation, localization, and user-generated content.
 
@@ -167,7 +167,7 @@ No tell is automatically wrong. Flag it when it is repeated, unearned, inconsist
 
 ## Run the viewport and content matrix
 
-At minimum, inspect:
+Choose representative cases that can expose failures in the changed surface; do not mechanically multiply every combination:
 
 | Axis | Cases |
 | --- | --- |
@@ -181,7 +181,7 @@ At minimum, inspect:
 
 Check the above-the-fold composition at a common laptop height. The next section may peek into view when that helps orientation, but do not compress the hero until it loses hierarchy.
 
-Batch the first visual review across representative desktop and mobile states. Fix the findings together, then use at most one confirmation pass. Do not turn polish into an open-ended screenshot loop.
+Batch the first visual review across representative desktop and mobile states. Fix scoped findings together and verify the result. Repeat only for new changes, failures, or unresolved concerns; stop when the requested outcome and required checks are complete.
 
 For repeatable capture, use `evidence-and-testing.md`. A screenshot taken before fonts, images, data, or motion settle is not dependable visual evidence.
 

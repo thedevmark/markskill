@@ -53,7 +53,7 @@ Audit the visible border tree. Name every enclosing layer from the background in
 - Use at most one enclosing product frame for a billboard-scale asset unless a second boundary is essential to understanding the interaction.
 - Prefer large rows, crops, rules, whitespace, and direct labels to panels inside panels.
 - Remove browser chrome, addresses, status pills, footnotes, helper copy, secondary buttons, and metadata when they are not the claim.
-- A product screenshot can be faithful without reproducing every visible control. Preserve the action and state that prove the claim; omit incidental chrome.
+- Crop screenshots to focus on the action and state that prove the claim. Label simplified reconstructions as illustrations; do not pass edited controls or invented states off as an actual product capture.
 
 Count text elements and borders after the first render. If the user asks for “much less text” or calls out boxes within boxes, do not merely reduce font size, shorten sentences, or restyle the same nesting. Delete whole layers and secondary messages.
 
@@ -80,7 +80,7 @@ Do not make the user absorb a stream of “you are right” messages while the s
 - Is the thumbnail identity-first, the marquee billboard-simple, and each carousel slide limited to one claim plus one proof?
 - Is every font confined to its approved semantic role?
 - Does the product proof demonstrate the mechanism rather than decorate the claim?
-- Are invented people, personal values, metrics, testimonials, and outcomes absent?
+- Are customer claims grounded, with any necessary fictional examples clearly labeled and harmless?
 - Does any safety or limitation copy appear only where consequential, rather than occupying the feature headline?
 - Is there no unnecessary frame inside a frame, card inside a card, or popup inside a product shell?
 - Have all accepted decisions from prior feedback survived this revision?

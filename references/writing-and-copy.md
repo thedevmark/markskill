@@ -127,7 +127,7 @@ Keep repetition when independent items must remain understandable on their own, 
 - Say what failed.
 - Preserve anything the user needs to avoid losing work.
 - Explain how to recover or what happens next.
-- Do not blame the user, say "Oops," add humor, or apologize reflexively.
+- Do not blame the user or substitute "Oops," humor, or a reflexive apology for an explanation. Preserve established voice when it fits the stakes and leaves the failure and recovery clear.
 - Example: "Couldn’t save the report. Check your connection and try again."
 
 ### Success and achievement
@@ -199,7 +199,7 @@ Keep a term when it is literal, established in the product, or more precise than
 
 ### Portability test
 
-Could the line move unchanged to another product or company? If so, replace it with a fact, mechanism, consequence, or judgment specific to this one.
+For claims and descriptive copy, could the line move unchanged to another product or company? If so, look for a fact, mechanism, consequence, or judgment specific to this one. Keep familiar functional labels such as "Save" or "Cancel" when they already describe the action clearly.
 
 ### Deletion test
 

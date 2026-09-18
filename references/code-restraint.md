@@ -29,7 +29,7 @@ Higher rungs are not automatically better. A native control that breaks required
 ## Keep the diff coherent
 
 - Optimize for the smallest correct ownership change, not the lowest line count. Readability, locality, debuggability, and explicit invariants may justify more lines.
-- Do not add an interface with one implementation, a factory with one product, configuration for a fixed value, or an extension point for a hypothetical future.
+- Do not add interfaces, factories, configuration, or extension points for hypothetical future needs. A single implementation can still justify a boundary for current testing, isolation, compatibility, or lifecycle requirements; name the present need.
 - Do not merge code merely because it looks similar. Share it when the behavior, change cadence, and ownership are genuinely the same.
 - Prefer deletion when behavior, compatibility, observability, and required checks remain intact. Never delete a guard or recovery path to improve the diff statistic.
 - Keep the number of touched files low when ownership permits it; do not force unrelated concerns into one file to win a file-count contest.
@@ -113,7 +113,3 @@ For each finding, name the location, effect, evidence, exact correction, and any
 - Is each custom abstraction or dependency justified by a current boundary or edge case?
 - Was the root invariant fixed without removing safety, accessibility, recovery, or observability?
 - Does the verification prove the changed behavior rather than merely show that the code compiles?
-
-## Source adaptation
-
-This guidance adapts the necessity/reuse/standard-library/platform/dependency ladder, comprehension-first bug fixing, safety floor, and explicit simplification ceilings from [Ponytail](https://github.com/DietrichGebert/ponytail) at commit `e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156` (MIT). Restraint intentionally does not adopt Ponytail's line-count target, forced one-liners, fixed test quota, intensity modes, or instruction to substitute a smaller feature for an explicit request.

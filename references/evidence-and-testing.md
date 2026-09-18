@@ -123,7 +123,7 @@ No clean result proves that copy is human, the design is specific, the hierarchy
 
 ## Report verification precisely
 
-State exactly what ran and what did not:
+Report enough detail to support the claim and expose material gaps. Summarize routine checks; include the following details when they affect confidence or reproducibility:
 
 - commands, tests, stories, routes, states, viewports, and browsers inspected;
 - whether screenshots were visually reviewed or only generated;
@@ -131,4 +131,4 @@ State exactly what ran and what did not:
 - whether content was checked in source, rendered context, or the full flow;
 - remaining inferred risks and untested states.
 
-Fix findings in one coherent batch, then use at most one confirmation pass. If a tool is unavailable or the environment cannot render faithfully, say so instead of upgrading inference into proof.
+Fix scoped findings in a coherent batch and verify them. Repeat when new changes, failures, or unresolved concerns justify it; stop once the outcome and required checks are complete. If a tool is unavailable or the environment cannot render faithfully, say so instead of upgrading inference into proof.
