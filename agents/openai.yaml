@@ -1,4 +1,4 @@
 interface:
-  display_name: "Restraint Framework"
+  display_name: "markskill"
   short_description: "Lean code, clear UI, grounded copy, honest verification"
-  default_prompt: "Use $restraint-framework to simplify this implementation and product surface without changing its job, inventing claims, or skipping verification."
+  default_prompt: "Use $markskill to simplify this implementation and product surface without changing its job, inventing claims, or skipping verification."

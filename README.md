@@ -4,7 +4,7 @@
 
 A restraint framework for code and product design. It guides implementation, dependencies, interfaces, copy, dashboards, charts, promotional assets, docs, and claims about verification. The code and design paths are distinct, so a small bug fix does not inherit a visual design audit and a visual revision does not collapse into a linter pass.
 
-A [before/after demo](https://thedevmark.github.io/restraint-framework/) shows one product page as agents ship it by default, and the same page after the skill runs.
+A [before/after demo](https://thedevmark.github.io/markskill/) shows one product page as agents ship it by default, and the same page after the skill runs.
 
 It runs on any agent that loads the Agent Skills convention (`SKILL.md` plus reference files): Claude Code, Codex, ZCode, and others. The skill is plain markdown, so it also works as a standalone review checklist for a human.
 
@@ -42,13 +42,13 @@ Clone straight into your agent's skills directory:
 
 ```bash
 # Claude Code
-git clone https://github.com/thedevmark/restraint-framework.git ~/.claude/skills/restraint-framework
+git clone https://github.com/thedevmark/markskill.git ~/.claude/skills/markskill
 
 # Codex
-git clone https://github.com/thedevmark/restraint-framework.git ~/.codex/skills/restraint-framework
+git clone https://github.com/thedevmark/markskill.git ~/.codex/skills/markskill
 
 # ZCode
-git clone https://github.com/thedevmark/restraint-framework.git ~/.zcode/skills/restraint-framework
+git clone https://github.com/thedevmark/markskill.git ~/.zcode/skills/markskill
 ```
 
 On Windows the same commands work in Git Bash; in PowerShell replace `~/` with your home directory. To share one copy across agents, clone once and symlink the others into it. For a single project only, clone into `.claude/skills/` (or your agent's project-level equivalent) inside the repo.
@@ -59,7 +59,7 @@ No skill infrastructure? Open `SKILL.md`, read it, and apply it. That is the who
 
 Ask your agent, in plain language:
 
-- "Use restraint-framework to critique the pricing page."
+- "Use markskill to critique the pricing page."
 - "Revise the empty states on the dashboard. Distill, don't redesign."
 - "Audit this store screenshot set for slop before I ship it."
 - "Simplify this diff without moving the behavior or deleting its guards."
