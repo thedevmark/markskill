@@ -1,4 +1,6 @@
-# Restraint Framework
+# markskill
+
+<p><img src="docs/assets/markskill-logo.png" alt="MARKSKILL — distressed ivory and red lettering with a crosshair around the S" width="720"></p>
 
 A restraint framework for code and product design. It guides implementation, dependencies, interfaces, copy, dashboards, charts, promotional assets, docs, and claims about verification. The code and design paths are distinct, so a small bug fix does not inherit a visual design audit and a visual revision does not collapse into a linter pass.
 
