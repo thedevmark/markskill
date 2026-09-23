@@ -4,7 +4,7 @@
 
 A restraint framework for code and product design. It guides implementation, dependencies, interfaces, copy, dashboards, charts, promotional assets, docs, and claims about verification. The code and design paths are distinct, so a small bug fix does not inherit a visual design audit and a visual revision does not collapse into a linter pass.
 
-A [before/after demo](https://thedevmark.github.io/markskill/) shows one product page as agents ship it by default, and the same page after the skill runs.
+The [framework overview](https://thedevmark.github.io/markskill/) summarizes its scope and components.
 
 It runs on any agent that loads the Agent Skills convention (`SKILL.md` plus reference files): Claude Code, Codex, ZCode, and others. The skill is plain markdown, so it also works as a standalone review checklist for a human.
 
