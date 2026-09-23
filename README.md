@@ -1,6 +1,6 @@
 # markskill
 
-<p align="center"><img src="docs/assets/markskill-logo-v5.png" alt="MARKSKILL — distressed ivory and red lettering with a crosshair around the S" width="720"></p>
+<p align="center"><img src="docs/assets/markskill-logo-v4.png" alt="MARKSKILL — distressed ivory and red lettering with a crosshair around the S" width="720"></p>
 
 markskill helps agents make proportionate changes to code and product surfaces. It finds the real problem, keeps what works, and verifies the result.
 
