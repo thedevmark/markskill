@@ -2,21 +2,17 @@
 
 <p align="center"><img src="docs/assets/markskill-logo-transparent.png" alt="MARKSKILL — distressed ivory and red lettering with a crosshair around the S" width="720"></p>
 
-A restraint framework for code and product design. It guides implementation, dependencies, interfaces, copy, dashboards, charts, promotional assets, docs, and claims about verification. The code and design paths are distinct, so a small bug fix does not inherit a visual design audit and a visual revision does not collapse into a linter pass.
+markskill helps agents make proportionate changes to code and product surfaces. It finds the real problem, keeps what works, and verifies the result.
 
 The [framework overview](https://thedevmark.github.io/markskill/) summarizes its scope and components.
 
 It runs on any agent that loads the Agent Skills convention (`SKILL.md` plus reference files): Claude Code, Codex, ZCode, and others. The skill is plain markdown, so it also works as a standalone review checklist for a human.
 
-## What it actually does
+## What it does
 
-- **A code path.** Trace the real behavior and its callers, fix the owning invariant, reuse the codebase and suitable platform capabilities, make dependencies earn their cost, and preserve the safety and verification floor.
-- **A design path.** Ground the surface in real content and established tokens; choose the right job for a persuasive, operational, reading, or experience surface; then refine hierarchy, copy, visual emphasis, interaction, and accessibility. Create, critique, and revise are design operating modes, not a checklist for every code task.
-- **A mixed path when needed.** Product work can use both references with one coherent change and verification plan.
-- **Fast iteration mode.** For rapid corrections, make the scoped edit, run the cheapest meaningful check, report, and stop that iteration. Full suites and repeated screenshot rounds wait for an actual risk, failure, or required release gate.
-- **Observable patterns, not guesses.** It never claims "an AI made this." It names the pattern and its effect: card soup, synonym cycling, uniform cadence, importance puffery, unearned glow, stacked containers, invented claims.
-- **Priorities with an order.** P0 truth, task, safety, and access failures before P1 ownership, complexity, hierarchy, and convergence failures before P2 local clarity and polish.
-- **It protects your product.** Established tokens and component contracts are normative, canonical assets get reused rather than imitated, and if the work is already distinctive it says so and stops instead of manufacturing a redesign.
+- **Code:** Trace the behavior to its owner and fix it without weakening safeguards or adding unnecessary complexity.
+- **Design:** Work from real content and the existing product to improve hierarchy, copy, and interaction.
+- **Review:** Prioritize concrete problems, make scoped changes, and report what was actually verified.
 
 ## Scope check
 
