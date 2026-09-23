@@ -1,6 +1,6 @@
 # markskill
 
-<p align="center"><img src="docs/assets/markskill-logo-v11.png" alt="MARKSKILL — ivory lettering with a red hand-drawn notebook S and crosshair" width="720"></p>
+<p align="center"><img src="docs/assets/markskill-logo-v12.png" alt="MARKSKILL — battered ivory lettering with a red notebook S and crosshair" width="720"></p>
 
 markskill helps agents decide what to change in code and product design. It keeps what works and ties each result to the checks that actually ran.
 
