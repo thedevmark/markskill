@@ -1,6 +1,6 @@
 ---
 name: markskill
-description: Use for restrained code changes or product design work. Route implementation, dependencies, and refactoring through the code path; route interfaces, copy, visuals, and artifacts through the design path. Apply proportionate verification and honest reporting, including fast iteration when the user asks for it.
+description: Use for restrained code changes or product design work. Route implementation, dependencies, and refactoring through the code path; route interfaces, copy, visuals, and artifacts through the design path. Run checks that fit the change and report results honestly, including fast iteration when the user asks for it.
 ---
 
 # markskill
