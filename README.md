@@ -67,12 +67,6 @@ The skill also applies to over-engineering, YAGNI, dependency choice, refactorin
 | `references/code-restraint.md` | Implementation ladder, root-cause ownership, dependency restraint, safety floor, and code-review method |
 | `agents/openai.yaml` | Interface metadata for OpenAI-compatible agent hosts |
 
-## Where this fits: context engineering
-
-This framework is one public piece of a context-engineering system I am building across my repositories. The premise: you get better agent work by engineering what the agent sees than by writing a cleverer prompt. Each repo carries its own operating context — an `AGENTS.md` that is the single authority, thin tool adapters instead of duplicated instructions, a routing index that loads only task-relevant files on demand, guarded versioned memory for durable facts, compaction and sub-agent isolation conventions, and an executable test that fails when the context layer itself drifts. The repos prompt themselves; the agent arrives routed.
-
-This repo is the shareable surface of that system: the skill that keeps the output honest while the context layer keeps the input honest. The private side is in active development and in daily use.
-
 ## License
 
 MIT
