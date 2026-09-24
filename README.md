@@ -30,8 +30,6 @@ The claim is "everything the agent builds and ships." Check it against the files
 | Protects accumulated context | direct execution for context-heavy or tightly coordinated work; evidence-backed delegation only for bounded, independent tasks |
 | Builds only what earns its keep | `references/code-restraint.md` — comprehension-first ownership, implementation ladder, dependency gate, safety floor, regression evidence |
 
-The boundary, stated plainly: this governs implementation restraint, product surfaces, and verification honesty. It is not a substitute for dedicated correctness, security, performance, or architecture review; it keeps those guards from being traded away in the name of minimalism.
-
 ## Install
 
 With Node.js installed, run this in your terminal and choose the agents you use:
