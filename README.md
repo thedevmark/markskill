@@ -34,22 +34,15 @@ The boundary, stated plainly: this governs implementation restraint, product sur
 
 ## Install
 
-Use the Markdown files with any AI agent or assistant. If your host supports skill directories, clone the repository there. For example:
+With Node.js installed, run this in your terminal and choose the agents you use:
 
 ```bash
-# Claude Code
-git clone https://github.com/thedevmark/markskill.git ~/.claude/skills/markskill
-
-# Codex
-git clone https://github.com/thedevmark/markskill.git ~/.codex/skills/markskill
-
-# ZCode
-git clone https://github.com/thedevmark/markskill.git ~/.zcode/skills/markskill
+npx skills add thedevmark/markskill -g
 ```
 
-On Windows the same commands work in Git Bash; in PowerShell replace `~/` with your home directory. To share one copy across agents, clone once and symlink the others into it. For a single project only, clone into `.claude/skills/` (or your agent's project-level equivalent) inside the repo.
+This installs markskill for use across projects. Leave off `-g` to install it only in the current project. The installer supports Codex, Claude Code, and other agent hosts; select the targets it offers. Run `npx skills update markskill` later to fetch updates.
 
-No skill loader? Give your agent `SKILL.md` and the relevant reference files as context.
+Prefer a manual install? Clone this repository into your agent's skills directory, such as `~/.codex/skills/markskill` or `~/.claude/skills/markskill`. If your agent has no skill loader, give it `SKILL.md` and the relevant reference files as context.
 
 ## Use
 
