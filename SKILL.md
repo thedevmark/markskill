@@ -1,9 +1,11 @@
 ---
 name: markskill
-description: Use for restrained code changes or product design work. Route implementation, dependencies, and refactoring through the code path; route interfaces, copy, visuals, and artifacts through the design path. Run checks that fit the change and report results honestly, including fast iteration when the user asks for it.
+description: Agent-agnostic guidance for code and product design work. Route implementation, dependencies, and refactoring through the code path; route interfaces, copy, visuals, and artifacts through the design path. Run checks that fit the change and report results honestly, including fast iteration when the user asks for it.
 ---
 
 # markskill
+
+This skill is plain Markdown for any AI agent or assistant that can read instructions. A compatible skill loader can load it from a skills directory; otherwise, provide this file and the relevant references as context.
 
 Make the smallest coherent change that serves the user's actual goal. Preserve the working product, its established choices, and the evidence needed to trust the result. Restraint is judgment about what earns its place, not a ban on particular styles, libraries, or amounts of code.
 

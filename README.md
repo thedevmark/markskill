@@ -2,11 +2,11 @@
 
 <p align="center"><img src="docs/assets/markskill-logo-v15.png" alt="MARKSKILL — battered ivory lettering, a red notebook S, and a centered crosshair" width="720"></p>
 
-markskill helps agents decide what to change in code and product design. It keeps what works and ties each result to the checks that actually ran.
+markskill is a Markdown skill for AI agents and assistants working on code and product design. It helps them decide what to change, keep what works, and tie each result to the checks that actually ran.
 
 The [framework overview](https://thedevmark.github.io/markskill/) summarizes its scope and components.
 
-It runs on any agent that loads the Agent Skills convention (`SKILL.md` plus reference files): Claude Code, Codex, ZCode, and others. The skill is plain markdown, so it also works as a standalone review checklist for a human.
+Any AI agent or assistant that can read Markdown instructions can use it. Hosts that support the Agent Skills convention can load `SKILL.md` and its references directly; elsewhere, provide those files as instructions. It also works as a review guide for a human.
 
 ## What it does
 
@@ -34,7 +34,7 @@ The boundary, stated plainly: this governs implementation restraint, product sur
 
 ## Install
 
-Clone straight into your agent's skills directory:
+Use the Markdown files with any AI agent or assistant. If your host supports skill directories, clone the repository there. For example:
 
 ```bash
 # Claude Code
@@ -49,7 +49,7 @@ git clone https://github.com/thedevmark/markskill.git ~/.zcode/skills/markskill
 
 On Windows the same commands work in Git Bash; in PowerShell replace `~/` with your home directory. To share one copy across agents, clone once and symlink the others into it. For a single project only, clone into `.claude/skills/` (or your agent's project-level equivalent) inside the repo.
 
-No skill infrastructure? Open `SKILL.md`, read it, and apply it. That is the whole mechanism.
+No skill loader? Give your agent `SKILL.md` and the relevant reference files as context.
 
 ## Use
 
