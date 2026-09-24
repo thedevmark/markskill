@@ -1,6 +1,6 @@
 # markskill
 
-<p align="center"><img src="docs/assets/markskill-logo-v15.png" alt="MARKSKILL — battered ivory lettering, a red notebook S, and a centered crosshair" width="720"></p>
+<p align="center"><img src="docs/assets/markskill-logo-v16.png" alt="MARKSKILL — battered ivory lettering, a red notebook S, and a centered crosshair" width="720"></p>
 
 markskill is a Markdown skill for AI agents and assistants working on code and product design. It helps them decide what to change, keep what works, and tie each result to the checks that actually ran.
 
