@@ -75,6 +75,8 @@ export URTEIL_STAGE="$stage"
 export URTEIL_MODEL="$model"
 export URTEIL_REASONING="$reasoning"
 export URTEIL_CODEX_BIN="$codex_bin"
+export URTEIL_SANDBOX="${URTEIL_SANDBOX:-workspace-write}"
+export URTEIL_CODEX_EXTRA_ARGS="${URTEIL_CODEX_EXTRA_ARGS:-}"
 
 unshare --user --map-root-user --mount --pid --fork --mount-proc bash -c '
   set -euo pipefail
@@ -96,11 +98,14 @@ unshare --user --map-root-user --mount --pid --fork --mount-proc bash -c '
   export HOME=/home/eval
   export PATH=/usr/local/bin:/usr/bin:/bin
   export BROWSER=/bin/false
+  export TMPDIR=/tmp
+  mkdir -p /mnt/wslg/distro/tmp
   cd /home/eval/workspace
-  printf "%s\n" "isolation=mount-namespace-v1" "arm=$URTEIL_ARM_ID" "model=$URTEIL_MODEL" "reasoning=$URTEIL_REASONING" > /home/eval/output/run-metadata.txt
+  printf "%s\n" "isolation=mount-namespace-v1" "arm=$URTEIL_ARM_ID" "model=$URTEIL_MODEL" "reasoning=$URTEIL_REASONING" "codex_sandbox=$URTEIL_SANDBOX" "codex_extra_args=$URTEIL_CODEX_EXTRA_ARGS" > /home/eval/output/run-metadata.txt
   set +e
-  "$URTEIL_CODEX_BIN" exec --ephemeral --ignore-user-config --ignore-rules --skip-git-repo-check --sandbox workspace-write --json --color never \
+  "$URTEIL_CODEX_BIN" exec --ephemeral --ignore-user-config --ignore-rules --skip-git-repo-check --sandbox "$URTEIL_SANDBOX" --json --color never $URTEIL_CODEX_EXTRA_ARGS \
     -m "$URTEIL_MODEL" -c "model_reasoning_effort=\"$URTEIL_REASONING\"" \
+    -c features.daemon_auto_start=false \
     -C /home/eval/workspace -o /home/eval/output/final.txt - \
     < "$URTEIL_STAGE/prompt.txt" > /home/eval/output/events.jsonl 2> /home/eval/output/stderr.txt
   exit_code=$?

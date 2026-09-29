@@ -48,7 +48,7 @@ The skill guides scope, implementation judgment, product surfaces, and verificat
 
 ## Evaluation status
 
-The framework is **not presented as universally validated**. A completed four-task Astra calibration compared a neutral baseline, the previous Restraint wording, and a frozen earlier candidate on bounded and structural front-end and back-end work. All three arms passed every fixed private behavioral check. That is evidence against the fear that this approach always under-scopes; it is not evidence that the skill beats a neutral agent or should decide everything. The current revision postdates that calibration and has not been scored; under the protocol it is a new arm. See the [calibration results](evaluations/calibration/results-2026-09-21.md) and the [paired, blinded holdout protocol](evaluations/protocol.md).
+The framework is **not presented as universally validated**. A completed four-task Astra calibration compared a neutral baseline, the previous Restraint wording, and a frozen earlier candidate on bounded and structural front-end and back-end work. All three arms passed every fixed private behavioral check. That is evidence against the fear that this approach always under-scopes; it is not evidence that the skill beats a neutral agent or should decide everything. A second calibration on 2026-09-29 ran the published bundle, frozen as `evaluations/arms/markskill-2026-09-29`, against a neutral control on the same four tasks under a Claude harness. Both arms passed every public and hidden check and chose the same scope class on every task; markskill used 17% more tokens. That is evidence the published revision does not under-scope, over-restructure, or misreport verification on these tasks; it is not evidence that it beats a neutral agent. See the [2026-09-21 results](evaluations/calibration/results-2026-09-21.md), the [2026-09-29 results](evaluations/calibration/results-2026-09-29.md), and the [paired, blinded holdout protocol](evaluations/protocol.md).
 
 ## Install
 
@@ -94,6 +94,7 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 | `evaluations/arms/` | Frozen comparison bundles and arm provenance |
 | `evaluations/validate_manifest.py` | Preflight check for arm inventory, hashes, isolation declarations, and study completeness |
 | `evaluations/calibration/results-2026-09-21.md` | One-shot Astra calibration outcomes, costs, and claim boundary |
+| `evaluations/calibration/results-2026-09-29.md` | Calibration of the published bundle against neutral under a Claude harness |
 | `evaluations/run_arm.sh` | Isolated local runner used for neutral and frozen skill arms |
 | `research/engineering-judgment.md` | External benchmark and senior-practitioner evidence that shaped the rewrite |
 | `agents/openai.yaml` | Interface metadata for OpenAI-compatible agent hosts |

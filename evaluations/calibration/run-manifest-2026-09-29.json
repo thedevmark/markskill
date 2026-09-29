@@ -2,24 +2,26 @@
   "format_version": 1,
   "study_id": "markskill-calibration-2026-09-29",
   "phase": "calibration",
-  "status": "draft",
+  "status": "frozen",
   "model": {
-    "name": "gpt-6-astra",
-    "version": "service-snapshot-not-exposed-by-client",
-    "reasoning": "ultra",
-    "client": "codex-cli (recorded per run)"
+    "name": "claude-opus (Claude Code subagent)",
+    "version": "as served 2026-09-29",
+    "reasoning": "default",
+    "client": "Claude Code Agent tool; Codex attempt aborted by account usage limit (codex-cli 0.159.0, gpt-6-astra ultra)"
   },
   "harness": {
-    "repository_head": "FILL_AT_COMMIT",
-    "runner_sha256": "b9dcd32e11ef1eff174fc7846e2eef6b883e197236cd3a7efb21492975e971c0",
+    "repository_head": "3df7d997444a227acc36dc51aea0f33aa89e5b8b (bundle frozen); results committed in the following commit",
+    "runner_sha256": "0e32481fdb923ae7dfd70179d814877709df76998ca673639157f0edb9ce4451",
     "isolation_probe_sha256": "c9a1e2259a9e2ed909eb79aadeb94171813935a54cdbb29ea6f9db8e6cfb4233",
-    "grader_revision": "public-suites-plus-controller-hidden-checks-2026-09-29"
+    "grader_revision": "public suites (agent-left and original) plus controller hidden checks; see controller_hidden_checks",
+    "note": "Codex runs: isolation probe passed, runner repaired for Codex 0.159 (sandbox hooks), no submission produced before the usage limit. Claude runs: fresh subagent per run, workspace copy per run, front-end tasks serialized per port, isolation by instruction only."
   },
   "isolation": {
     "fresh_process_per_run": true,
     "isolated_config_per_arm": true,
-    "private_material_unreadable": true,
-    "isolation_probe_passed": true
+    "private_material_unreadable": false,
+    "isolation_probe_passed": false,
+    "note": "Claude harness: hidden checks were outside the workspaces and never named, but no namespace enforced the boundary."
   },
   "repetitions": 1,
   "arms": [
@@ -200,5 +202,12 @@
   "arms_executed": [
     "neutral",
     "markskill"
-  ]
+  ],
+  "controller_hidden_checks": {
+    "cal-backend-01": "cal-backend-01@b2a3093d64d37368057e37193a7093845c07f8ffdb69c46f7fe6b6b736b5e33f",
+    "cal-backend-02": "cal-backend-02@b5e421619b6d6d98f5b440f1aa423ce4d78c9836efd0f4982659f13efb1f8c78",
+    "cal-fe-01": "cal-fe-01@7cf18460a591ff9649f782826037a84c11150ead9a7d16c95d718ef8a6789b99",
+    "cal-fe-02": "cal-fe-02@5af954567cadabbd09a6a34e55a5a82f6d5ae77bf7c4ff55992ed9a839468917"
+  },
+  "results": "results-2026-09-29.md"
 }
