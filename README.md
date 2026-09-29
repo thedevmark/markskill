@@ -1,14 +1,14 @@
 # markskill
 
-<p align="center"><img src="docs/assets/markskill-logo-v15.png" alt="markskill wordmark" width="720"></p>
+<p align="center"><img src="docs/assets/markskill-logo-v16.png" alt="markskill wordmark" width="720"></p>
 
 **Understand the whole problem. Change what the evidence demands.**
 
-markskill is a judgment framework for coding agents working on code and product surfaces. It helps an agent decide whether the warranted change is a local repair, a shared-owner correction, a structural refactor, a staged migration, or a replacement. It looks for the complete solution with no complexity it does not need, and it refuses invented proof and claims the evidence does not support.
+markskill is a judgment framework for AI agents and assistants working on code and product surfaces. It helps an agent decide whether the warranted change is a local repair, a shared-owner correction, a structural refactor, a staged migration, or a replacement. It looks for the complete solution with no complexity it does not need, and it refuses invented proof and claims the evidence does not support.
 
 The [framework overview](https://thedevmark.github.io/markskill/) summarizes its scope and components.
 
-It runs on any agent that loads the Agent Skills convention (`SKILL.md` plus reference files): Claude Code, Codex, ZCode, and others. The skill is plain markdown with no scripts, hooks, or setup commands, so it also works as a standalone review checklist for a human.
+Any AI agent or assistant that can read Markdown instructions can use it. Hosts that support the Agent Skills convention load `SKILL.md` and its references directly; elsewhere, provide those files as context. It is plain Markdown with no scripts, hooks, or setup commands, and it also works as a review guide for a human.
 
 ## Start from the record
 
@@ -51,22 +51,15 @@ The framework is **not presented as universally validated**. A completed four-ta
 
 ## Install
 
-Clone straight into your agent's skills directory:
+With Node.js installed, run this in your terminal and choose the agents you use:
 
 ```bash
-# Claude Code
-git clone https://github.com/thedevmark/markskill.git ~/.claude/skills/markskill
-
-# Codex
-git clone https://github.com/thedevmark/markskill.git ~/.codex/skills/markskill
-
-# ZCode
-git clone https://github.com/thedevmark/markskill.git ~/.zcode/skills/markskill
+npx skills add thedevmark/markskill -g
 ```
 
-On Windows the same commands work in Git Bash; in PowerShell replace `~/` with your home directory. To share one copy across agents, clone once and symlink the others into it. For a single project only, clone into `.claude/skills/` (or your agent's project-level equivalent) inside the repo.
+This installs markskill for use across projects. Leave off `-g` to install it only in the current project. The installer supports Codex, Claude Code, and other agent hosts; select the targets it offers. Run `npx skills update markskill` later to fetch updates.
 
-Without a skills directory, read `SKILL.md` and apply it.
+Prefer a manual install? Clone this repository into your agent's skills directory, such as `~/.codex/skills/markskill` or `~/.claude/skills/markskill`. If your agent has no skill loader, give it `SKILL.md` and the relevant reference files as context.
 
 ## Use
 
@@ -106,12 +99,6 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 ## Lineage
 
 markskill grew out of two open skill sets and deliberately stands alone from both. From [superpowers](https://github.com/obra/superpowers) (MIT) it adapts the process discipline: evidence before claims, delegation and review contracts, regression proof by reversion, and naming the excuse at the moment it appears. From [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) it adapts the craft floor: direction contracts, color strategy, typography and motion numbers, native platform conformance, and durable project records. Everything here is rewritten to fit an evidence-led, proportionate framework; nothing is copied verbatim. The parts of both that mandate ceremony on small tasks, numeric scores, fixed loop counts, tooling, or redesign by default were left out on purpose.
-
-## Where this fits: context engineering
-
-This framework is one public piece of a context-engineering system I am building across my repositories. The premise: you get better agent work by engineering what the agent sees than by writing a cleverer prompt. Each repo carries its own operating context. An `AGENTS.md` is the single authority, thin tool adapters replace duplicated instructions, a routing index loads only task-relevant files on demand, guarded versioned memory holds durable facts, and an executable test fails when the context layer itself drifts.
-
-This repo is the shareable surface of that system: the skill that helps an agent choose warranted scope and keep its own record, while the context layer keeps the input grounded. The private side is in active development and in daily use.
 
 ## License
 

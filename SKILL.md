@@ -5,6 +5,8 @@ description: Use when fixing, refactoring, reviewing, critiquing, or designing c
 
 # markskill
 
+Plain Markdown for any AI agent or assistant that can read instructions. A skill loader can load it from a skills directory; otherwise provide this file and the relevant references as context.
+
 Understand the whole problem. Change what the evidence demands.
 
 Use the user's goal, current requirements, and observed behavior to determine scope. Preserve existing structure when it remains fit for that scope. Restructure or replace it when extending it would preserve the underlying failure, spread workarounds, or materially impair correctness, reliability, accessibility, security, or maintainability. Build the complete solution with no complexity it does not need. Change size is an outcome, not a target.
