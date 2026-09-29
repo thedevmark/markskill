@@ -36,10 +36,11 @@ The claim is "everything the agent builds and ships." Check it against the files
 | Proves tests prove something | `references/code-restraint.md` — regression proof by reversion, mutation thinking, condition-based waiting, pristine output |
 | No fluff in copy | `references/writing-and-copy.md` — voice found in authored material, semantic redundancy pass, pattern clusters, weak vocabulary |
 | Nothing invented | `SKILL.md` unconditional rules; `references/writing-and-copy.md` truth test; `references/design-restraint.md` labeled illustrative content with a replacement list |
+| Names the excuse before acting on it | `references/review-and-report.md` — rationalization table, P0 to P3 severity, report shapes |
 | Looks good, not decorated | `references/visual-and-interaction.md` — tell catalog, color strategy, typography floors, motion timing, native platform conformance |
 | Fits your product, not a template | `references/design-restraint.md` — grounding in real content and tokens, a four-block direction contract |
 | Survives real use | `references/design-restraint.md` and `references/visual-and-interaction.md` — keyboard, focus, states, zoom, reduced motion with an intentional alternative, input detection |
-| Claims only what ran | `SKILL.md` unconditional rules; `references/evidence-and-testing.md` claim table, hedge-word check, runtime and data claims |
+| Claims only what ran | `SKILL.md` unconditional rules; `references/review-and-report.md` claim gate; `references/evidence-and-testing.md` claim table, hedge-word check, runtime and data claims |
 | Iterates without thrashing | `SKILL.md` fast iteration mode; feedback handling in `references/promotional-assets-and-feedback.md` |
 | Delegates without losing context | `references/execution-and-review.md` — five-part delegation, four-status return, reviewer scope rules, scoped re-verification |
 
@@ -78,7 +79,8 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 
 | file | job |
 |---|---|
-| `SKILL.md` | Unconditional rules, shared rules, routing to the references, fast iteration, reporting, and the rationalization table |
+| `SKILL.md` | Unconditional rules, shared rules, routing to the references, and fast iteration; kept short because it loads on every task |
+| `references/review-and-report.md` | Claim gate, severity tiers, report shapes, delegation rule, and the rationalization table |
 | `references/project-record.md` | What the project record holds, read-first and write-on-learn rules, and templates |
 | `references/code-restraint.md` | Scope diagnosis, root-cause ownership, intervention choices, migration and replacement tests, safety floor, verification in proportion, and code-review method |
 | `references/design-restraint.md` | Operating modes, surface modes, refinement intents, direction contract, and workflow for product surfaces |

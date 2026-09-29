@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 
-REQUIRED_ARMS = {"neutral", "current-restraint", "urteilskraft"}
+REQUIRED_NEUTRAL_ARM = "neutral"
 PLACEHOLDER_FRAGMENTS = ("replace-", "record-", "fixed-before-")
 
 
@@ -62,9 +62,13 @@ def validate(manifest_path: Path, strict: bool) -> tuple[list[str], list[str]]:
     if not isinstance(arms, list):
         return ["arms must be a list"], warnings
 
-    arm_ids = {arm.get("id") for arm in arms if isinstance(arm, dict)}
-    if arm_ids != REQUIRED_ARMS:
-        errors.append(f"arms must be exactly {sorted(REQUIRED_ARMS)}")
+    arm_ids = [arm.get("id") for arm in arms if isinstance(arm, dict)]
+    if len(arm_ids) != len(set(arm_ids)):
+        errors.append("arm ids must be unique")
+    if REQUIRED_NEUTRAL_ARM not in arm_ids:
+        errors.append("arms must include the neutral control")
+    if len(arm_ids) < 2:
+        errors.append("arms must include at least one skill arm beside neutral")
 
     for arm in arms:
         if not isinstance(arm, dict):
