@@ -1,20 +1,28 @@
-# Restraint Framework
+# markskill
 
-A restraint framework for code and product design. It guides implementation, dependencies, interfaces, copy, dashboards, charts, promotional assets, docs, and claims about verification. The code and design paths are distinct, so a small bug fix does not inherit a visual design audit and a visual revision does not collapse into a linter pass.
+<p align="center"><img src="docs/assets/markskill-logo-v15.png" alt="markskill wordmark" width="720"></p>
 
-A [before/after demo](https://thedevmark.github.io/restraint-framework/) shows one product page as agents ship it by default, and the same page after the skill runs.
+**Understand the whole problem. Change what the evidence demands.**
 
-It runs on any agent that loads the Agent Skills convention (`SKILL.md` plus reference files): Claude Code, Codex, ZCode, and others. The skill is plain markdown, so it also works as a standalone review checklist for a human.
+markskill is a judgment framework for coding agents working on code and product surfaces. It helps an agent decide whether the warranted change is a local repair, a shared-owner correction, a structural refactor, a staged migration, or a replacement. It looks for the complete solution with no complexity it does not need, and it refuses invented proof and claims the evidence does not support.
 
-## What it actually does
+The [framework overview](https://thedevmark.github.io/markskill/) summarizes its scope and components.
 
-- **A code path.** Trace the real behavior and its callers, fix the owning invariant, reuse the codebase and suitable platform capabilities, make dependencies earn their cost, and preserve the safety and verification floor.
-- **A design path.** Ground the surface in real content and established tokens; choose the right job for a persuasive, operational, reading, or experience surface; then refine hierarchy, copy, visual emphasis, interaction, and accessibility. Create, critique, and revise are design operating modes, not a checklist for every code task.
-- **A mixed path when needed.** Product work can use both references with one coherent change and verification plan.
-- **Fast iteration mode.** For rapid corrections, make the scoped edit, run the cheapest meaningful check, report, and stop that iteration. Full suites and repeated screenshot rounds wait for an actual risk, failure, or required release gate.
-- **Observable patterns, not guesses.** It never claims "an AI made this." It names the pattern and its effect: card soup, synonym cycling, uniform cadence, importance puffery, unearned glow, stacked containers, invented claims.
-- **Priorities with an order.** P0 truth, task, safety, and access failures before P1 ownership, complexity, hierarchy, and convergence failures before P2 local clarity and polish.
-- **It protects your product.** Established tokens and component contracts are normative, canonical assets get reused rather than imitated, and if the work is already distinctive it says so and stops instead of manufacturing a redesign.
+It runs on any agent that loads the Agent Skills convention (`SKILL.md` plus reference files): Claude Code, Codex, ZCode, and others. The skill is plain markdown with no scripts, hooks, or setup commands, so it also works as a standalone review checklist for a human.
+
+## Start from the record
+
+Agents re-derive the same facts every session: where the tokens live, who owns an invariant, what the product's voice sounds like, which decisions the owner already made. markskill reads the repository's project record first (`AGENTS.md`, `PRODUCT.md`, `DESIGN.md`, `docs/context/INDEX.md`) and writes back the durable facts a task establishes, one fact per versioned entry, so the next session starts from evidence instead of a search. It reuses whatever record the repository already has and creates only the smallest missing piece.
+
+## Product surfaces
+
+markskill begins with the user's full task and the real states the interface must support. It preserves the product's visual language and canonical components when they remain fit, removes repetition and decorative hierarchy, and keeps responsive behavior, accessibility, recovery, and honest states intact. When the composition or interaction model prevents the required outcome, it supports redesign or rebuilding instead of polishing the wrong structure.
+
+## Code
+
+markskill traces behavior through its invariants, callers, data lifecycle, and operational constraints before choosing scope. It repairs a sound owner and restructures, migrates, or replaces an unfit one. It does not trade away validation, authorization, recovery, observability, compatibility, or meaningful regression evidence to make a diff look smaller.
+
+Work that crosses both sides uses one coherent change and a verification plan that fits the change.
 
 ## Scope check
 
@@ -22,17 +30,24 @@ The claim is "everything the agent builds and ships." Check it against the files
 
 | claim | enforced by |
 |---|---|
-| No fluff in copy | `references/writing-and-copy.md` — semantic redundancy pass, pattern clusters, weak vocabulary |
-| Nothing invented | SKILL.md priorities — fabricated claims, invented metrics, testimonials, and outcomes are P0 failures |
-| Looks good, not decorated | `references/visual-and-interaction.md` — tell catalog, emphasis rules, squint test |
-| Fits your product, not a template | `references/design-restraint.md` — grounding in real content and tokens, one committed direction |
-| Survives real use | `references/design-restraint.md` — keyboard, focus, states, zoom, reduced motion |
-| Honest about what was verified | `references/evidence-and-testing.md` — labeled evidence; never claim a render or test that did not happen |
-| Iterates without thrashing | `SKILL.md` fast iteration mode, decision ledger, feedback handling in `references/promotional-assets-and-feedback.md` |
-| Protects accumulated context | direct execution for context-heavy or tightly coordinated work; evidence-backed delegation only for bounded, independent tasks |
-| Builds only what earns its keep | `references/code-restraint.md` — comprehension-first ownership, implementation ladder, dependency gate, safety floor, regression evidence |
+| Remembers what it learned | `references/project-record.md` — read first, write on learn, one fact per entry, index points to the owning file |
+| Chooses warranted scope | `references/code-restraint.md` — ownership tracing, intervention choices, migration and replacement tests, dependency gate, safety floor |
+| Diagnoses before fixing | `references/code-restraint.md` — full error and stack, recent changes, layer-boundary logging, one hypothesis at a time |
+| Proves tests prove something | `references/code-restraint.md` — regression proof by reversion, mutation thinking, condition-based waiting, pristine output |
+| No fluff in copy | `references/writing-and-copy.md` — voice found in authored material, semantic redundancy pass, pattern clusters, weak vocabulary |
+| Nothing invented | `SKILL.md` unconditional rules; `references/writing-and-copy.md` truth test; `references/design-restraint.md` labeled illustrative content with a replacement list |
+| Looks good, not decorated | `references/visual-and-interaction.md` — tell catalog, color strategy, typography floors, motion timing, native platform conformance |
+| Fits your product, not a template | `references/design-restraint.md` — grounding in real content and tokens, a four-block direction contract |
+| Survives real use | `references/design-restraint.md` and `references/visual-and-interaction.md` — keyboard, focus, states, zoom, reduced motion with an intentional alternative, input detection |
+| Claims only what ran | `SKILL.md` unconditional rules; `references/evidence-and-testing.md` claim table, hedge-word check, runtime and data claims |
+| Iterates without thrashing | `SKILL.md` fast iteration mode; feedback handling in `references/promotional-assets-and-feedback.md` |
+| Delegates without losing context | `references/execution-and-review.md` — five-part delegation, four-status return, reviewer scope rules, scoped re-verification |
 
-The boundary, stated plainly: this governs implementation restraint, product surfaces, and verification honesty. It is not a substitute for dedicated correctness, security, performance, or architecture review; it keeps those guards from being traded away in the name of minimalism.
+The skill guides scope, implementation judgment, product surfaces, and verification honesty. It does not replace dedicated review; the last line of `SKILL.md` says which kinds. Its effectiveness must be established per task family and harness rather than assumed from its wording.
+
+## Evaluation status
+
+The framework is **not presented as universally validated**. A completed four-task Astra calibration compared a neutral baseline, the previous Restraint wording, and a frozen earlier candidate on bounded and structural front-end and back-end work. All three arms passed every fixed private behavioral check. That is evidence against the fear that this approach always under-scopes; it is not evidence that the skill beats a neutral agent or should decide everything. The current revision postdates that calibration and has not been scored; under the protocol it is a new arm. See the [calibration results](evaluations/calibration/results-2026-09-21.md) and the [paired, blinded holdout protocol](evaluations/protocol.md).
 
 ## Install
 
@@ -40,49 +55,63 @@ Clone straight into your agent's skills directory:
 
 ```bash
 # Claude Code
-git clone https://github.com/thedevmark/restraint-framework.git ~/.claude/skills/restraint-framework
+git clone https://github.com/thedevmark/markskill.git ~/.claude/skills/markskill
 
 # Codex
-git clone https://github.com/thedevmark/restraint-framework.git ~/.codex/skills/restraint-framework
+git clone https://github.com/thedevmark/markskill.git ~/.codex/skills/markskill
 
 # ZCode
-git clone https://github.com/thedevmark/restraint-framework.git ~/.zcode/skills/restraint-framework
+git clone https://github.com/thedevmark/markskill.git ~/.zcode/skills/markskill
 ```
 
 On Windows the same commands work in Git Bash; in PowerShell replace `~/` with your home directory. To share one copy across agents, clone once and symlink the others into it. For a single project only, clone into `.claude/skills/` (or your agent's project-level equivalent) inside the repo.
 
-No skill infrastructure? Open `SKILL.md`, read it, and apply it. That is the whole mechanism.
+Without a skills directory, read `SKILL.md` and apply it.
 
 ## Use
 
 Ask your agent, in plain language:
 
-- "Use restraint-framework to critique the pricing page."
+- "Use markskill to critique the pricing page."
 - "Revise the empty states on the dashboard. Distill, don't redesign."
 - "Audit this store screenshot set for slop before I ship it."
 - "Simplify this diff without moving the behavior or deleting its guards."
 - "Fast iteration: make this one change, check the affected behavior, and report."
+- "Set up the project record for this repo from what is already here."
 
-The skill also applies to over-engineering, YAGNI, dependency choice, refactoring, polish, hierarchy, taste, density, clarify, distill, harden, quieter, or bolder. A critique names the few highest-value findings and exact corrections. A revision reports what changed, what was preserved, and what was actually verified.
+It also covers dependency choice, refactoring, migration, delegation, and the six refinement intents: clarify, distill, harden, polish, bolder, quieter. A critique names the few highest-value findings with a severity tier and exact corrections. A revision reports what changed, what was preserved or replaced, and what was actually verified.
 
 ## Files
 
 | file | job |
 |---|---|
-| `SKILL.md` | Shared rules, path routing, fast iteration, and reporting |
-| `references/design-restraint.md` | Design modes and workflow for product surfaces |
-| `references/writing-and-copy.md` | Copy rules, pattern-cluster table, editing tests, example corrections |
-| `references/visual-and-interaction.md` | Visual tell catalog and verification matrix |
-| `references/evidence-and-testing.md` | Evidence labeling and audit method |
+| `SKILL.md` | Unconditional rules, shared rules, routing to the references, fast iteration, reporting, and the rationalization table |
+| `references/project-record.md` | What the project record holds, read-first and write-on-learn rules, and templates |
+| `references/code-restraint.md` | Scope diagnosis, root-cause ownership, intervention choices, migration and replacement tests, safety floor, verification in proportion, and code-review method |
+| `references/design-restraint.md` | Operating modes, surface modes, refinement intents, direction contract, and workflow for product surfaces |
+| `references/writing-and-copy.md` | Voice grounding, copy rules by component, pattern-cluster table, editing tests, example corrections |
+| `references/visual-and-interaction.md` | Tell catalog, hierarchy and spacing rules, typography floors, color strategy, motion timing, input and viewport adaptation, native conformance, verification matrix |
+| `references/evidence-and-testing.md` | Evidence lanes and labels, runtime and data claims, claim table, state matrix, stabilization, and reporting |
 | `references/promotional-assets-and-feedback.md` | Store art, thumbnails, social graphics, iterative feedback handling |
-| `references/code-restraint.md` | Implementation ladder, root-cause ownership, dependency restraint, safety floor, and code-review method |
+| `references/execution-and-review.md` | Briefs, progress records, delegation and return contracts, independent review, and templates for long or risky work |
+| `evaluations/protocol.md` | Frozen comparison design, task matrix, scoring, critical failures, and claim boundaries |
+| `evaluations/task-template.md` | Task-package contract for reproducible calibration and holdout cases |
+| `evaluations/arms/` | Frozen comparison bundles and arm provenance |
+| `evaluations/validate_manifest.py` | Preflight check for arm inventory, hashes, isolation declarations, and study completeness |
+| `evaluations/calibration/results-2026-09-21.md` | One-shot Astra calibration outcomes, costs, and claim boundary |
+| `evaluations/run_arm.sh` | Isolated local runner used for neutral and frozen skill arms |
+| `research/engineering-judgment.md` | External benchmark and senior-practitioner evidence that shaped the rewrite |
 | `agents/openai.yaml` | Interface metadata for OpenAI-compatible agent hosts |
+
+## Lineage
+
+markskill grew out of two open skill sets and deliberately stands alone from both. From [superpowers](https://github.com/obra/superpowers) (MIT) it adapts the process discipline: evidence before claims, delegation and review contracts, regression proof by reversion, and naming the excuse at the moment it appears. From [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) it adapts the craft floor: direction contracts, color strategy, typography and motion numbers, native platform conformance, and durable project records. Everything here is rewritten to fit an evidence-led, proportionate framework; nothing is copied verbatim. The parts of both that mandate ceremony on small tasks, numeric scores, fixed loop counts, tooling, or redesign by default were left out on purpose.
 
 ## Where this fits: context engineering
 
-This framework is one public piece of a context-engineering system I am building across my repositories. The premise: you get better agent work by engineering what the agent sees than by writing a cleverer prompt. Each repo carries its own operating context — an `AGENTS.md` that is the single authority, thin tool adapters instead of duplicated instructions, a routing index that loads only task-relevant files on demand, guarded versioned memory for durable facts, compaction and sub-agent isolation conventions, and an executable test that fails when the context layer itself drifts. The repos prompt themselves; the agent arrives routed.
+This framework is one public piece of a context-engineering system I am building across my repositories. The premise: you get better agent work by engineering what the agent sees than by writing a cleverer prompt. Each repo carries its own operating context. An `AGENTS.md` is the single authority, thin tool adapters replace duplicated instructions, a routing index loads only task-relevant files on demand, guarded versioned memory holds durable facts, and an executable test fails when the context layer itself drifts.
 
-This repo is the shareable surface of that system: the skill that keeps the output honest while the context layer keeps the input honest. The private side is in active development and in daily use.
+This repo is the shareable surface of that system: the skill that helps an agent choose warranted scope and keep its own record, while the context layer keeps the input grounded. The private side is in active development and in daily use.
 
 ## License
 

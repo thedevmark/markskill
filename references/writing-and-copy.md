@@ -28,7 +28,9 @@ Identify:
 - what evidence the product actually has;
 - which voice traits must survive the edit.
 
-The best line is not the cleverest line. It is the shortest truthful line that makes the next decision easier.
+Find the voice in the product's existing authored copy, documentation, and accepted decisions before editing. Do not infer it from generic defaults.
+
+Choose the shortest truthful line that makes the next decision easier.
 
 ## Match register and tone to the surface
 
@@ -68,6 +70,8 @@ Keep repetition when independent items must remain understandable on their own, 
 
 - Put the point before the setup.
 - Keep one idea per sentence, label, or paragraph when possible.
+- Split sentences that make readers hold several clauses before reaching the point. If a sentence needs multiple commas, conjunctions, or parenthetical turns, check whether it is carrying more than one idea.
+- Keep web copy proportional to the decision. State the point once, add only context that changes understanding or action, and stop. Do not turn a heading, subhead, card, and adjacent paragraph into four explanations of the same feature.
 - Prefer active voice and direct verbs.
 - Replace abstract nouns with the thing, action, mechanism, or consequence.
 - Use familiar product language. Never make users decode an internal metaphor.
@@ -118,13 +122,14 @@ Keep repetition when independent items must remain understandable on their own, 
 
 ### Empty state
 
+- Name which empty this is. First use, no results, filtered out, permission blocked, and load failure need different copy and different actions; one generic empty message serves none of them.
 - Explain why the area is empty only if the reason is not obvious.
 - Offer the next useful action.
 - Do not celebrate emptiness, joke at the user, or fill the space with generic motivation.
 
 ### Error
 
-- Say what failed.
+- Say what failed, and match the message to the failure class. Authentication, permission, not found, rate limit, validation, and server failure each need a different explanation and recovery.
 - Preserve anything the user needs to avoid losing work.
 - Explain how to recover or what happens next.
 - Do not blame the user or substitute "Oops," humor, or a reflexive apology for an explanation. Preserve established voice when it fits the stakes and leaves the failure and recovery clear.
@@ -136,6 +141,7 @@ Keep repetition when independent items must remain understandable on their own, 
 - Avoid narrating the user's feelings, superiority, luck, or identity.
 - Prefer "10 applications tracked" to "You are past the point where most people quit."
 - Do not inflate routine activity into a heroic transformation.
+- Scale celebration to frequency and consequence. The hundredth completion still has to read well.
 
 ### Metrics and claims
 
@@ -219,7 +225,7 @@ Underline every claim. For each one, locate product behavior, user-provided evid
 
 ### Read-aloud test
 
-Read the copy once at normal speed. Fix breathless lists, repeated rhythms, accidental rhyme, tongue-twisting noun stacks, and lines no person would say.
+Read the copy once at normal speed. Fix run-on sentences, breathless lists, repeated rhythms, accidental rhyme, tongue-twisting noun stacks, and lines no person would say. If the reader has to pause to find the main point, shorten or split the sentence.
 
 ### Shuffle test
 

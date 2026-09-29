@@ -1,0 +1,10 @@
+{
+  "task_id": "cal-fe-02",
+  "family": "frontend-async-lifecycle",
+  "contrast": "structural identity and state ownership",
+  "public_root": "public",
+  "public_tree_sha256": "bf35d043ce991ba3854b69c32377e1275878cf1e86172129c6f6e3ca95a87d33",
+  "public_command": "npm test && npm run test:browser",
+  "baseline_expected_failure": "tests/public/upload-retry.spec.mjs :: a removed pending file cannot update another entry",
+  "private_grader_id": "cal-fe-02@012f14d26b863b9efd0fd09ab69a2a093d94d42f6ff617640e5059aec2ad0bfd"
+}

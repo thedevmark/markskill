@@ -1,0 +1,10 @@
+{
+  "task_id": "cal-backend-01",
+  "family": "backend-boundary",
+  "contrast": "caller-specific normalization",
+  "public_root": "public",
+  "public_tree_sha256": "9b97fcd9b4a887de4bdc784583b3138f1125d2960ca0e890d949772b0842aa9f",
+  "public_command": "python -m unittest discover -s tests -v",
+  "baseline_expected_failure": "tests.test_csv_import.CSVImportTests.test_partner_amount_cells_allow_surrounding_whitespace",
+  "private_grader_id": "cal-backend-01@baa1ce7d3086c2a4c4114b0f35518b23966be98a6f205217314b3ef6c35d7c3b"
+}

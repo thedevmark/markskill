@@ -1,0 +1,4 @@
+.card-list { display: grid; gap: .75rem; padding: 0; list-style: none; }
+.card { border: 1px solid var(--line); border-radius: .5rem; background: var(--surface); }
+.receipt-card { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 1rem; }
+.receipt-card a { color: var(--accent); }

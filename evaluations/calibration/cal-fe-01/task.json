@@ -1,0 +1,10 @@
+{
+  "task_id": "cal-fe-01",
+  "family": "frontend-layout",
+  "contrast": "local component layout repair",
+  "public_root": "public",
+  "public_tree_sha256": "7d8fd927cc04c5a6c5c01678b262a4fdc094e93bdb2bba044d44ed8074d8bf26",
+  "public_command": "npm test && npm run test:browser",
+  "baseline_expected_failure": "tests/public/search-layout.spec.mjs :: long saved-search names keep their Run action inside a phone viewport",
+  "private_grader_id": "cal-fe-01@4b1545ea5db4362d4a045d92311c1c50b47e0869f79481d5754c1792fc0de047"
+}

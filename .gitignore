@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+node_modules/
+test-results/
+
+# Only the shipped wordmark is tracked; working logo versions stay local.
+docs/assets/*
+!docs/assets/markskill-logo-v15.png

@@ -1,0 +1,8 @@
+[
+  { "id": "ordinary", "name": "Frontend roles in Boston", "query": "frontend Boston" },
+  { "id": "spaced", "name": "Senior accessibility engineering roles with flexible schedules and strong design systems", "query": "accessibility remote" },
+  { "id": "unbroken", "name": "SupercalifragilisticexpialidociousSupercalifragilisticexpialidociousSupercalifragilisticexpialidociousSupercalifragilisticexpialidociousSupercalifragilisticexpialidocious", "query": "long token" },
+  { "id": "duplicate-one", "name": "Product design", "query": "product design" },
+  { "id": "duplicate-two", "name": "Product design", "query": "product designer" },
+  { "id": "untitled", "name": "", "query": "saved yesterday" }
+]

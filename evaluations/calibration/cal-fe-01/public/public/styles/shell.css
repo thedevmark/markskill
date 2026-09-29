@@ -1,0 +1,21 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem max(1rem, calc((100vw - 64rem) / 2));
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.brand { display: inline-flex; align-items: center; gap: .5rem; color: inherit; font-weight: 750; text-decoration: none; }
+.brand img { width: 1.5rem; }
+nav { display: flex; flex-wrap: wrap; gap: .75rem; }
+nav a { color: var(--accent); }
+main { width: min(64rem, calc(100% - 2rem)); margin: 2rem auto; }
+h1 { margin: 0 0 1rem; font-size: clamp(1.8rem, 5vw, 3rem); }
+.status { width: min(64rem, calc(100% - 2rem)); min-height: 1.5rem; margin: 0 auto 2rem; color: var(--muted); }
+
+@media (max-width: 34rem) {
+  .site-header { align-items: flex-start; flex-direction: column; }
+}

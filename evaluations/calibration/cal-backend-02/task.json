@@ -1,0 +1,10 @@
+{
+  "task_id": "cal-backend-02",
+  "family": "backend-durable-invariant",
+  "contrast": "shared transactional ownership",
+  "public_root": "public",
+  "public_tree_sha256": "8c5c56ba0973f759f44a5e3a0b467c096138d743a1e699f2f5e0230971a3783b",
+  "public_command": "python -m unittest discover -s tests -v",
+  "baseline_expected_failure": "tests.test_web.WebBookingTests.test_retry_returns_original_reservation",
+  "private_grader_id": "cal-backend-02@3d5e6e6ea6c369e1f08a8844054423c3c9d29d38810013d88630c608309c8921"
+}

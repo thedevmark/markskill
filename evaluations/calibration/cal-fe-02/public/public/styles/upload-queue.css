@@ -1,0 +1,13 @@
+.queue-list { display:grid; gap:.75rem; margin:0; padding:0; list-style:none; }
+.queue-row { display:grid; grid-template-columns:minmax(0,1fr) auto auto; gap:.75rem; align-items:center; padding:1rem; border:1px solid var(--line); border-radius:.5rem; background:var(--surface); }
+.file-copy { min-width:0; }
+.file-name { overflow-wrap:anywhere; font-weight:700; }
+.file-size,.file-status { color:var(--muted); font-size:.875rem; }
+.file-status[data-status="failed"] { color:var(--danger); }
+.actions { display:flex; flex-wrap:wrap; gap:.5rem; }
+.actions button { padding:.45rem .7rem; border:1px solid var(--line); border-radius:.35rem; background:var(--surface); cursor:pointer; }
+
+@media (max-width:34rem) {
+  .queue-row { grid-template-columns:1fr; }
+  .actions { justify-content:flex-start; }
+}

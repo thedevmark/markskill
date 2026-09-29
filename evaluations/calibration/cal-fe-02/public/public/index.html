@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document desk</title>
+  <link rel="stylesheet" href="/styles/tokens.css">
+  <link rel="stylesheet" href="/styles/shell.css">
+  <link rel="stylesheet" href="/styles/upload-queue.css">
+</head>
+<body>
+  <header><strong>Document desk</strong><span>Application documents</span></header>
+  <main>
+    <h1>Upload documents</h1>
+    <p>Add your files, then upload them together. You can remove or retry individual entries.</p>
+    <div class="toolbar">
+      <label class="add-files">Add files<input id="file-input" type="file" multiple></label>
+      <button id="upload-all" type="button">Upload all</button>
+    </div>
+    <section aria-labelledby="queue-heading">
+      <h2 id="queue-heading">Queue</h2>
+      <div id="queue"></div>
+    </section>
+    <p id="announcement" class="announcement" role="status" aria-live="polite"></p>
+  </main>
+  <script type="module" src="/src/app.mjs"></script>
+</body>
+</html>

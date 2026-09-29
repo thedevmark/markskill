@@ -15,7 +15,7 @@ Judge the exported pixels in that condition. A high-resolution source that is le
 
 Run both tests:
 
-1. **Distance test:** step back or reduce the preview until it approximates the distribution context. The identity, dominant promise, and proof result must remain readable.
+1. **Distance test:** downscale the export to the pixel size the store, feed, or search result displays it at, record that size, and read it at 1x. The identity, dominant promise, and proof result must be legible there.
 2. **Squint test:** blur detail mentally. The image should retain one focal message and one proof shape, not dissolve into equal-weight text and borders.
 
 ## Give each asset one job

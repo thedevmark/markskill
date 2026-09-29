@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "study_id": "replace-before-running",
+  "phase": "calibration",
+  "status": "draft",
+  "model": {
+    "name": "gpt-6-astra",
+    "version": "record-exact-version",
+    "reasoning": "fixed-before-running"
+  },
+  "harness": {
+    "revision": "record-harness-revision",
+    "grader_revision": "record-grader-revision"
+  },
+  "isolation": {
+    "fresh_process_per_run": true,
+    "isolated_config_per_arm": true,
+    "private_material_unreadable": true,
+    "isolation_probe_passed": false
+  },
+  "repetitions": 1,
+  "arms": [
+    {
+      "id": "neutral",
+      "kind": "neutral",
+      "bundle": null,
+      "files": []
+    },
+    {
+      "id": "current-restraint",
+      "kind": "skill",
+      "bundle": "arms/current-restraint",
+      "files": [
+        { "path": "SKILL.md", "sha256": "0d6073f70bb1268ff0d5486d74b132c99a7820376ba0b4c8c5625f6c9b10756e" },
+        { "path": "agents/openai.yaml", "sha256": "bf8e98d6709676b4b48e091f70b3fb48e0455656481764304330e67155a629fc" },
+        { "path": "references/code-restraint.md", "sha256": "1b7f2a1930812fe5bb09090c940a0eb0eac23d825602d13deaf40ca72b9f9764" },
+        { "path": "references/design-restraint.md", "sha256": "d4327bac909913c45301c54224c9f2cd7f0772b2d18bf1f3699f6cbff7f84ab0" },
+        { "path": "references/evidence-and-testing.md", "sha256": "ea63484f5b00fe69cd8b9b2a5b3308770bd98f7af6e0bb0edfe85ca56da0080b" },
+        { "path": "references/promotional-assets-and-feedback.md", "sha256": "535569e581fef9bbd9cdfa4aa398571647f2f0e605393a0009127abf591684e8" },
+        { "path": "references/visual-and-interaction.md", "sha256": "b7dc9484eaa6490eb801c7b74b162b7a949c1be7344f33fcb2525c7ba971b478" },
+        { "path": "references/writing-and-copy.md", "sha256": "e6cfc8e74883e6f9d638414a36cfacc54587130f66e8b01e060af5b592ce235c" }
+      ]
+    },
+    {
+      "id": "urteilskraft",
+      "kind": "skill",
+      "bundle": "arms/urteilskraft-candidate",
+      "files": [
+        { "path": "SKILL.md", "sha256": "80641d2d1cce7c25d8f990d375de522bf8fa2499e00652e9e8a4a3f5f316fecc" },
+        { "path": "agents/openai.yaml", "sha256": "26f7082fc07ff6353feca5828a3487f533a1e95126c9a1e8c0d16053d4373b80" },
+        { "path": "references/code-restraint.md", "sha256": "a73df6663d37aab7a5c2d143928b3132c4b283f91cacd467447e94fb26ed9304" },
+        { "path": "references/design-restraint.md", "sha256": "3ecce8435d772def8b50d82201660dcf9cf173b8eb4d0afd87f9fc6db8026b39" },
+        { "path": "references/evidence-and-testing.md", "sha256": "ea63484f5b00fe69cd8b9b2a5b3308770bd98f7af6e0bb0edfe85ca56da0080b" },
+        { "path": "references/promotional-assets-and-feedback.md", "sha256": "535569e581fef9bbd9cdfa4aa398571647f2f0e605393a0009127abf591684e8" },
+        { "path": "references/visual-and-interaction.md", "sha256": "b7dc9484eaa6490eb801c7b74b162b7a949c1be7344f33fcb2525c7ba971b478" },
+        { "path": "references/writing-and-copy.md", "sha256": "e6cfc8e74883e6f9d638414a36cfacc54587130f66e8b01e060af5b592ce235c" }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "cal-fe-01",
+      "manifest": "calibration/cal-fe-01/task.json",
+      "public_tree_sha256": "7d8fd927cc04c5a6c5c01678b262a4fdc094e93bdb2bba044d44ed8074d8bf26",
+      "private_grader_id": "cal-fe-01@4b1545ea5db4362d4a045d92311c1c50b47e0869f79481d5754c1792fc0de047"
+    },
+    {
+      "id": "cal-fe-02",
+      "manifest": "calibration/cal-fe-02/task.json",
+      "public_tree_sha256": "bf35d043ce991ba3854b69c32377e1275878cf1e86172129c6f6e3ca95a87d33",
+      "private_grader_id": "cal-fe-02@012f14d26b863b9efd0fd09ab69a2a093d94d42f6ff617640e5059aec2ad0bfd"
+    },
+    {
+      "id": "cal-backend-01",
+      "manifest": "calibration/cal-backend-01/task.json",
+      "public_tree_sha256": "9b97fcd9b4a887de4bdc784583b3138f1125d2960ca0e890d949772b0842aa9f",
+      "private_grader_id": "cal-backend-01@baa1ce7d3086c2a4c4114b0f35518b23966be98a6f205217314b3ef6c35d7c3b"
+    },
+    {
+      "id": "cal-backend-02",
+      "manifest": "calibration/cal-backend-02/task.json",
+      "public_tree_sha256": "8c5c56ba0973f759f44a5e3a0b467c096138d743a1e699f2f5e0230971a3783b",
+      "private_grader_id": "cal-backend-02@3d5e6e6ea6c369e1f08a8844054423c3c9d29d38810013d88630c608309c8921"
+    }
+  ],
+  "policies": {
+    "practical_improvement_points": 5,
+    "critical_failures": [
+      "security-regression",
+      "data-loss",
+      "missing-central-requirement",
+      "fabricated-verification",
+      "irrecoverable-incomplete-migration"
+    ],
+    "runner_failures": "score-under-preregistered-policy",
+    "early_stop": "only-after-reproduced-critical-regression"
+  }
+}

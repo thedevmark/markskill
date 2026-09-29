@@ -1,0 +1,8 @@
+header { display:flex; justify-content:space-between; gap:1rem; padding:1rem max(1rem,calc((100vw - 54rem)/2)); border-bottom:1px solid var(--line); background:var(--surface); }
+main { width:min(54rem,calc(100% - 2rem)); margin:2rem auto; }
+h1 { margin:0; font-size:clamp(2rem,6vw,3.5rem); }
+h2 { margin-top:2rem; }
+.toolbar { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.5rem 0; }
+.add-files,#upload-all { border:0; border-radius:.4rem; padding:.65rem .9rem; color:white; background:var(--accent); cursor:pointer; }
+.add-files input { position:absolute; inline-size:1px; block-size:1px; clip-path:inset(50%); }
+.announcement { min-height:1.5rem; color:var(--muted); }

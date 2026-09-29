@@ -1,0 +1,5 @@
+:root { --ink:#172019; --muted:#5d685f; --paper:#f5f7f1; --surface:#fff; --line:#cad2c7; --accent:#176b45; --danger:#9b2c2c; font:16px/1.5 system-ui,sans-serif; }
+* { box-sizing: border-box; }
+body { margin:0; color:var(--ink); background:var(--paper); }
+button,input { font:inherit; }
+button:focus-visible,label:has(input:focus-visible) { outline:3px solid #79b99a; outline-offset:3px; }

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search desk</title>
+  <link rel="stylesheet" href="/styles/tokens.css">
+  <link rel="stylesheet" href="/styles/shell.css">
+  <link rel="stylesheet" href="/styles/cards.css">
+  <link rel="stylesheet" href="/styles/saved-searches.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#saved"><img src="/assets/brand.svg" alt="">Search desk</a>
+    <nav aria-label="Primary">
+      <a href="#saved">Saved searches</a>
+      <a href="#receipts">Receipts</a>
+    </nav>
+  </header>
+  <main id="app"></main>
+  <p id="status" class="status" role="status" aria-live="polite"></p>
+  <script type="module" src="/src/app.mjs"></script>
+</body>
+</html>

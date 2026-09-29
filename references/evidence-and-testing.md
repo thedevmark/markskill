@@ -1,10 +1,11 @@
 # Evidence and Testing Reference
 
-Use this reference when implementing, auditing, or verifying a visual or content change. It keeps taste judgment, source inspection, and automated testing from being confused with one another.
+Use this reference when a claim depends on rendered, runtime, or behavioral evidence rather than source inspection alone. The state and viewport material targets interfaces; the evidence lanes and reporting rules apply to any change, including database and production behavior. It keeps taste judgment, source inspection, and automated testing from being confused with one another.
 
 ## Contents
 
 - Keep three evidence lanes separate
+- Establish runtime and data claims
 - Respect project authority
 - Review in a useful order
 - Build a representative state matrix
@@ -35,12 +36,24 @@ Keep findings labeled:
 - **test-confirmed** — reproduced by an executed check or user path;
 - **inferred** — plausible but not yet verified.
 
+## Establish runtime and data claims
+
+A claim about a database, a job, a service, or production behavior needs the same discipline as a rendered one. For each such claim, record:
+
+- the query, log line, metric, or command output that shows the behavior, not a description of it;
+- the environment and revision it was observed against;
+- whether the observation came after the final relevant change; and
+- for a migration, the row counts or invariants checked before and after, and the rollback path exercised or explicitly not exercised.
+
+Label these **test-confirmed** when a check ran, **render-observed** when a dashboard or log was read, and **inferred** otherwise. A migration that ran on a fixture is not evidence about production data.
+
 ## Respect project authority
 
 - Inspect the repository's style guide, `DESIGN.md`, tokens, shared components, stories, tests, and nearby usage before inventing a local rule.
 - Treat design tokens and documented component contracts as normative until evidence shows drift or an intentional migration.
 - Treat rationale and examples as context. Verify that current implementation still matches them.
-- Preserve unknown sections and authored decisions. Do not create, replace, or broadly rewrite design documentation during a scoped UI cleanup unless asked.
+- Preserve unknown sections and authored decisions. Do not replace or broadly rewrite design documentation during a scoped UI cleanup unless asked. Recording a durable fact the task established belongs in the project record (`references/project-record.md`) and is not a rewrite.
+- When documentation is the task, lead each entry with the description and put the exact value in parentheses; say where and why a token is used; write short named rules rather than long bullet lists; document only tokens that are reused and components that exist; never overwrite an existing file unasked. Two observed failures: a prohibition that bans a device the system itself uses, and a token added only to silence a check.
 - Prefer the project's configured tools. Do not install axe, Storybook, a prose linter, or a visual-regression service merely because it could be useful.
 
 ## Review in a useful order
@@ -123,12 +136,27 @@ No clean result proves that copy is human, the design is specific, the hierarchy
 
 ## Report verification precisely
 
+Before any statement of success, name the check that would prove it, run it on the final relevant change, and read the whole output. Then claim with the evidence attached. Common false equivalences:
+
+| Claim | Insufficient | Sufficient |
+| --- | --- | --- |
+| It builds | Linter or type check passed | The build command ran and exited clean |
+| Tests pass | Tests passed earlier, or on another tree | The suite ran on this tree after the last change |
+| Requirements met | Tests pass | Each requirement mapped to a check or observation |
+| Delegate finished | The delegate's report says done | The diff and its checks were inspected |
+| It renders correctly | Source looks right | The rendered state was observed at the relevant widths |
+
+Hedge words are the tell: if the sentence needs "should", "probably", or "seems", the claim has outrun the evidence. Answer each verification item with a file, selector, computed value, command output, or rendered observation, never with "yes".
+
 Report enough detail to support the claim and expose material gaps. Summarize routine checks; include the following details when they affect confidence or reproducibility:
 
 - commands, tests, stories, routes, states, viewports, and browsers inspected;
+- whether the evidence was produced after the final relevant change and against the environment or revision being claimed;
 - whether screenshots were visually reviewed or only generated;
 - whether accessibility was automated, manual, or both;
 - whether content was checked in source, rendered context, or the full flow;
 - remaining inferred risks and untested states.
+
+Evidence remains applicable only while the relevant code, inputs, target, and environment remain unchanged. Rerun checks whose claim coverage may have changed; unrelated edits do not invalidate earlier results.
 
 Fix scoped findings in a coherent batch and verify them. Repeat when new changes, failures, or unresolved concerns justify it; stop once the outcome and required checks are complete. If a tool is unavailable or the environment cannot render faithfully, say so instead of upgrading inference into proof.
