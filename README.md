@@ -104,6 +104,20 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 
 markskill grew out of two open skill sets and deliberately stands alone from both. From [superpowers](https://github.com/obra/superpowers) (MIT) it adapts the process discipline: evidence before claims, delegation and review contracts, regression proof by reversion, and naming the excuse at the moment it appears. From [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) it adapts the craft floor: direction contracts, color strategy, typography and motion numbers, native platform conformance, and durable project records. Everything here is rewritten to fit an evidence-led, proportionate framework; nothing is copied verbatim. The parts of both that mandate ceremony on small tasks, numeric scores, fixed loop counts, tooling, or redesign by default were left out on purpose.
 
+---
+
+## deutschmark's other apps
+
+<table>
+<tr><td align="center" width="56"><img src=".github/apps/pathos.svg" width="44" alt=""></td><td><a href="https://yourpathos.app"><b>Pathos</b></a><br>Worker-side job search with source-linked roles, evidence-checked resumes, and application tracking.</td></tr>
+<tr><td align="center" width="56"><img src=".github/apps/alert-alert.svg" width="39" alt=""></td><td><a href="https://github.com/thedevmark/alert-alert"><b>Alert! Alert!</b></a><br>Turn a video URL or local file into a cropped, trimmed stream alert.</td></tr>
+<tr><td align="center" width="56"><img src=".github/apps/auto-iphone-uploader.svg" width="39" alt=""></td><td><a href="https://github.com/thedevmark/auto-iphone-uploader"><b>Auto iPhone Uploader</b></a><br>Write a video's title and captions once on your PC, then post it from the real apps on your iPhone. Early preview.</td></tr>
+<tr><td align="center" width="56"><img src=".github/apps/streamer-online.svg" width="44" alt=""></td><td><a href="https://streamer.deutschmark.online"><b>Streamer Online</b></a><br>Build OBS scenes and browser-source overlays with connected streamer tools.</td></tr>
+<tr><td align="center" width="56"><img src=".github/apps/forgetmenot.png" width="32" alt=""></td><td><a href="https://github.com/thedevmark/forgetmenot"><b>ForgetMeNot</b></a><br>A local-first Twitch bot that remembers regulars, callbacks, and stream lore.</td></tr>
+</table>
+
+<sub>All projects → <a href="https://github.com/thedevmark">github.com/thedevmark</a></sub>
+
 ## License
 
 MIT

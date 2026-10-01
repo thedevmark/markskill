@@ -1,0 +1,15 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="smileGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB547"/>
+      <stop offset="100%" stop-color="#EEF4FA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="#0D1521"/>
+  <rect x="40" y="40" width="944" height="944" rx="200" fill="#162334"/>
+  <path d="M 313 217 Q 361 209 409 217 L 394 456 Q 361 450 328 456 Z" fill="#FFB547"/>
+  <path d="M 615 217 Q 663 209 711 217 L 696 456 Q 663 450 630 456 Z" fill="#EEF4FA"/>
+  <ellipse cx="361" cy="531" rx="55" ry="53" fill="#FFB547"/>
+  <ellipse cx="663" cy="531" rx="55" ry="53" fill="#EEF4FA"/>
+  <path d="M 335 723 Q 512 859 689 723" stroke="url(#smileGrad)" stroke-width="48" stroke-linecap="round" fill="none"/>
+</svg>

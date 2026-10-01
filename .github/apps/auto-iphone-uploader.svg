@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Auto iPhone Uploader">
+  <rect width="64" height="64" rx="14" fill="#1b1b1e"/>
+  <g transform="translate(10 9) scale(0.72)">
+    <mask id="logoGap" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64"><rect width="64" height="64" fill="#fff"/><circle cx="50" cy="50" r="15.6" fill="#000"/></mask><mask id="logoCut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64"><rect width="64" height="64" fill="#fff"/><path d="M50 41.6 57.4 49.3h-4.5v8.1h-5.8v-8.1h-4.5Z" fill="#000" stroke="#000" stroke-width="1.6" stroke-linejoin="round"/></mask><g mask="url(#logoGap)" fill="#f1f0ee"><path fill-rule="evenodd" d="M16 2h19a9 9 0 0 1 9 9v42a9 9 0 0 1 -9 9h-19a9 9 0 0 1 -9 -9v-42a9 9 0 0 1 9 -9ZM16.2 6.2h18.6a5 5 0 0 1 5 5v41.6a5 5 0 0 1 -5 5h-18.6a5 5 0 0 1 -5 -5v-41.6a5 5 0 0 1 5 -5Z"/><rect x="19.5" y="9.8" width="12" height="4.2" rx="2.1"/></g><circle cx="50" cy="50" r="12.6" fill="#f1f0ee" mask="url(#logoCut)"/>
+  </g>
+</svg>
