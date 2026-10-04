@@ -60,7 +60,9 @@ npx skills add thedevmark/markskill -g
 
 This installs markskill for use across projects. Leave off `-g` to install it only in the current project. The installer supports Codex, Claude Code, and other agent hosts; select the targets it offers. Run `npx skills update markskill` later to fetch updates.
 
-Prefer a manual install? Clone this repository into your agent's skills directory, such as `~/.codex/skills/markskill` or `~/.claude/skills/markskill`. If your agent has no skill loader, give it `SKILL.md` and the relevant reference files as context.
+Prefer a manual install? Copy `SKILL.md`, `references/`, and `agents/` into a `markskill` folder in your agent's skills directory, such as `~/.codex/skills/markskill` or `~/.claude/skills/markskill`. Copy only those: `evaluations/arms/` holds frozen test versions with their own `SKILL.md` files, which a loader that scans subfolders would pick up as extra skills. If your agent has no skill loader, give it `SKILL.md` and the relevant reference files as context.
+
+Using more than one agent? Keep one copy, for example in `~/.agents/skills/markskill`, and link each agent's skills folder to it: `ln -s ~/.agents/skills/markskill ~/.claude/skills/markskill` on macOS and Linux, or `mklink /J %USERPROFILE%\.claude\skills\markskill %USERPROFILE%\.agents\skills\markskill` on Windows. Every agent then reads the same files, and an edit never has to be copied. `agents/openai.yaml` only adds display metadata for Codex; other hosts ignore it.
 
 ## Use
 
