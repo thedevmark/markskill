@@ -54,6 +54,17 @@ No option is automatically better because it is earlier, smaller, newer, or more
 
 One clear expression is better than a wrapper that only renames another call. A small named helper is better than a dense one-liner when the name carries domain meaning or the compact form hides failure behavior.
 
+## Comment the code as it is
+
+A comment explains the code in front of the reader: the invariant it keeps, the constraint it works within, or the non-obvious reason it has this shape. Write that reason as a present fact.
+
+- Do not narrate history in code: no dates, incidents, "previously", "was changed because", "the owner decided", ticket numbers, or which person or agent wrote it. That belongs in the commit message, changelog, or project record.
+- State the cause, not the story: "safeupdate rejects a bare DELETE called through PostgREST", not "this failed every night for weeks".
+- Do not restate the code, label the obvious, or pad. Keep each comment short and exact.
+- When the code changes, update or delete the comment in the same edit. A stale comment is a defect.
+
+Migration headers and changelogs are records by nature; they may say why the change was made.
+
 ## Fix the owner, not the named symptom
 
 A bug report usually identifies one failing path. Before patching it:
@@ -148,3 +159,4 @@ For each finding, name the location, effect, evidence, exact correction, and any
 - Was the root invariant fixed without removing safety, accessibility, recovery, or observability?
 - If the existing owner was preserved, is it still fit for the required behavior? If it was replaced, was every affected contract and transition handled?
 - Does the verification prove the changed behavior rather than merely show that the code compiles?
+- Does every comment describe the code as it is now, with no history, and is any comment the change made stale updated or gone?
