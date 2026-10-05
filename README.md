@@ -43,6 +43,7 @@ The claim is "everything the agent builds and ships." Check it against the files
 | Claims only what ran | `SKILL.md` unconditional rules; `references/review-and-report.md` claim gate; `references/evidence-and-testing.md` claim table, hedge-word check, runtime and data claims |
 | Iterates without thrashing | `SKILL.md` fast iteration mode; feedback handling in `references/promotional-assets-and-feedback.md` |
 | Delegates without losing context | `references/execution-and-review.md` — five-part delegation, four-status return, reviewer scope rules, scoped re-verification |
+| Reaches a target grade honestly | `references/graded-review-loop.md` — anchored grade scale, per-item triage, measured efficiency claims, mutation-proven tests, fresh-reviewer confirmation, stop rules |
 
 The skill guides scope, implementation judgment, product surfaces, and verification honesty. It does not replace dedicated review; the last line of `SKILL.md` says which kinds. Its effectiveness must be established per task family and harness rather than assumed from its wording.
 
@@ -74,6 +75,7 @@ Ask your agent, in plain language:
 - "Simplify this diff without moving the behavior or deleting its guards."
 - "Fast iteration: make this one change, check the affected behavior, and report."
 - "Set up the project record for this repo from what is already here."
+- "Have an independent reviewer grade the billing module and keep going until it gets an A+."
 
 It also covers dependency choice, refactoring, migration, delegation, and the six refinement intents: clarify, distill, harden, polish, bolder, quieter. A critique names the few highest-value findings with a severity tier and exact corrections. A revision reports what changed, what was preserved or replaced, and what was actually verified.
 
@@ -91,6 +93,7 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 | `references/evidence-and-testing.md` | Evidence lanes and labels, runtime and data claims, claim table, state matrix, stabilization, and reporting |
 | `references/promotional-assets-and-feedback.md` | Store art, thumbnails, social graphics, iterative feedback handling |
 | `references/execution-and-review.md` | Briefs, progress records, delegation and return contracts, independent review, and templates for long or risky work |
+| `references/graded-review-loop.md` | Opt-in loop for "review it and keep going until it gets an A+": grade scale, triage, measurement, re-review message, fresh confirmation, and stop rules |
 | `evaluations/protocol.md` | Frozen comparison design, task matrix, scoring, critical failures, and claim boundaries |
 | `evaluations/task-template.md` | Task-package contract for reproducible calibration and holdout cases |
 | `evaluations/arms/` | Frozen comparison bundles and arm provenance |
@@ -104,7 +107,7 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 
 ## Lineage
 
-markskill grew out of two open skill sets and deliberately stands alone from both. From [superpowers](https://github.com/obra/superpowers) (MIT) it adapts the process discipline: evidence before claims, delegation and review contracts, regression proof by reversion, and naming the excuse at the moment it appears. From [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) it adapts the craft floor: direction contracts, color strategy, typography and motion numbers, native platform conformance, and durable project records. Everything here is rewritten to fit an evidence-led, proportionate framework; nothing is copied verbatim. The parts of both that mandate ceremony on small tasks, numeric scores, fixed loop counts, tooling, or redesign by default were left out on purpose.
+markskill grew out of two open skill sets and deliberately stands alone from both. From [superpowers](https://github.com/obra/superpowers) (MIT) it adapts the process discipline: evidence before claims, delegation and review contracts, regression proof by reversion, and naming the excuse at the moment it appears. From [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) it adapts the craft floor: direction contracts, color strategy, typography and motion numbers, native platform conformance, and durable project records. Everything here is rewritten to fit an evidence-led, proportionate framework; nothing is copied verbatim. The parts of both that mandate ceremony on small tasks, numeric scores, fixed loop counts, tooling, or redesign by default were left out on purpose. The graded review loop is the one place a grade appears, and only when the user asks for it.
 
 ---
 

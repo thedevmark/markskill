@@ -1,6 +1,6 @@
 ---
 name: markskill
-description: Use when fixing, refactoring, reviewing, critiquing, or designing code, interfaces, or copy. Covers bug fixes that may be symptom patches, refactor or rewrite decisions, dependency choices, landing-page and UI revisions, copy that reads AI-generated or generic, pre-ship critiques, and any output that must read as finished authored work rather than filler.
+description: Use when fixing, refactoring, reviewing, critiquing, or designing code, interfaces, or copy. Covers bug fixes that may be symptom patches, refactor or rewrite decisions, dependency choices, landing-page and UI revisions, copy that reads AI-generated or generic, pre-ship critiques, requests to have an independent reviewer grade work and iterate until a target grade such as A+, and any output that must read as finished authored work rather than filler.
 ---
 
 # markskill
@@ -22,6 +22,7 @@ If the request bundles independent subsystems, split it into units that each lea
 - **Product surfaces** (interfaces, copy, interaction, visuals, promotional assets): read [product judgment](references/design-restraint.md). Load [visual and interaction](references/visual-and-interaction.md), [writing and copy](references/writing-and-copy.md), or [promotional assets and feedback](references/promotional-assets-and-feedback.md) only when the task needs that detail. Before writing copy, read the product's authored text and match its voice; if none exists, state the voice assumed.
 - **Code** (server, client, API, data, dependencies, debugging, refactoring): read [engineering judgment](references/code-restraint.md). Read [evidence and testing](references/evidence-and-testing.md) when a claim crosses from source into rendered, runtime, database, or production behavior.
 - **Long, delegated, or risky work**: read [execution and review](references/execution-and-review.md) before delegating or handing off a review, including to another agent or another vendor's model.
+- **A target grade from an independent reviewer** ("keep going until it gets an A+"): read [graded review loop](references/graded-review-loop.md) as well as execution and review.
 - **Any critique or completion report**: read [review and report](references/review-and-report.md) for the claim gate, severity tiers, and report shapes.
 
 A change that spans surfaces and code uses one coherent change and verification plan.
@@ -33,7 +34,7 @@ These do not scale with task size, speed, or pressure:
 - Never report a check as run or passed unless it ran on the final relevant change and its output was read.
 - Never invent proof: metrics, testimonials, customers, people, benchmarks, prices, or capabilities.
 - Never delete validation, authorization, recovery, or observability to shrink a diff.
-- Never present inference as observation. Label findings source-confirmed, render-observed, test-confirmed, or inferred.
+- Never present inference as observation. Label findings source-confirmed, render-observed, test-confirmed, inferred, or reported.
 
 Everything else scales with evidence and risk.
 

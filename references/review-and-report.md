@@ -22,7 +22,7 @@ When unsure between two tiers, ask whether a user would contact support. If so, 
 ## Report shapes
 
 - **Critique:** the few findings that would most improve the work, each with tier, location, effect, and exact correction. Name concrete effects rather than guessing who made the artifact. Findings that need the project record go under a "record" heading.
-- **Revision:** what changed, what was preserved or replaced, what ran with its outcome, and any material gap. Label each claim source-confirmed, render-observed, test-confirmed, or inferred where confidence matters.
+- **Revision:** what changed, what was preserved or replaced, what ran with its outcome, and any material gap. Label each claim source-confirmed, render-observed, test-confirmed, inferred, or reported where confidence matters.
 - **Both:** lead with the result. Include only the detail the reader needs to assess it. No narration of the process.
 
 ## Delegation

@@ -69,7 +69,7 @@ Read `references/evidence-and-testing.md` for implementation, audit, or verifica
 
 - Read the source for semantics, tokens, component contracts, copy, and code-level tells.
 - Render or inspect pixels for hierarchy, palette dominance, optical alignment, spacing rhythm, wrapping, and motion whenever possible.
-- Label important findings with the four labels in `references/evidence-and-testing.md`: **source-confirmed**, **render-observed**, **test-confirmed**, or **inferred**. Do not assert a visual defect from source alone when the rendered result could change the judgment.
+- Label important findings with the labels in `references/evidence-and-testing.md`: **source-confirmed**, **render-observed**, **test-confirmed**, **inferred**, or **reported**. Do not assert a visual defect from source alone when the rendered result could change the judgment.
 - Make the design assessment before reading linter or detector findings when practical. Mechanical findings should not anchor the taste judgment.
 - Treat a clean detector, linter, or accessibility scan as a floor. It cannot prove that writing is human, hierarchy is clear, or the design is good.
 

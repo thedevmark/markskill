@@ -52,7 +52,7 @@ Mode belongs to the surface, not the company. Do not apply a marketing-page hero
 
 - Use source to confirm semantics, component contracts, token use, content, DOM order, and code-level defaults.
 - Use rendered pixels to judge hierarchy, optical alignment, palette weight, density, wrapping, and motion. Read computed values, not intended ones.
-- Mark findings as source-confirmed, render-observed, test-confirmed, or inferred when confidence matters.
+- Mark findings as source-confirmed, render-observed, test-confirmed, inferred, or reported when confidence matters.
 - Do not claim a spacing, balance, or visual-emphasis defect as confirmed without seeing the result.
 - Keep the first design judgment independent from automated findings. A clean scan cannot prove taste or task clarity.
 

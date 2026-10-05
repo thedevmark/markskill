@@ -34,7 +34,8 @@ Keep findings labeled:
 - **source-confirmed** — directly established by code or product content;
 - **render-observed** — visible in the inspected artifact;
 - **test-confirmed** — reproduced by an executed check or user path;
-- **inferred** — plausible but not yet verified.
+- **inferred** — plausible but not yet verified;
+- **reported** — taken from another party's account, such as an author's summary or a measurement the labeler did not run, and not re-checked.
 
 ## Establish runtime and data claims
 
@@ -45,7 +46,7 @@ A claim about a database, a job, a service, or production behavior needs the sam
 - whether the observation came after the final relevant change; and
 - for a migration, the row counts or invariants checked before and after, and the rollback path exercised or explicitly not exercised.
 
-Label these **test-confirmed** when a check ran, **render-observed** when a dashboard or log was read, and **inferred** otherwise. A migration that ran on a fixture is not evidence about production data.
+Label these **test-confirmed** when a check ran, **render-observed** when a dashboard or log was read, **reported** when the number comes from someone else's run or dashboard, and **inferred** otherwise. A migration that ran on a fixture is not evidence about production data.
 
 ## Respect project authority
 
