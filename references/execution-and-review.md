@@ -60,6 +60,8 @@ When parallel units return, check for conflicting edits, run the combined checks
 
 Use an independent reviewer when the change crosses owners, alters a contract or migration, carries meaningful security or data risk, contains unresolved ambiguity, or is otherwise expensive to get wrong. A small, well-covered edit does not need a ritual second pass.
 
+Security review follows the same rule. Run it where risk enters: a change to authentication, authorization, input parsing, secrets, dependencies, or an external boundary, and before code leaves the machine at commit, push, or pull request. Scope it to that change. Do not wire a full review or scanner to every edit, tool call, or turn: the cost recurs on every action, the findings repeat, and repeated noise teaches everyone to skip them. A targeted check at the right boundary is cheaper and gets read; a blanket pass on every action is neither.
+
 Give the reviewer:
 
 - the user's requirement and accepted product decisions;
