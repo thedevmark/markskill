@@ -52,4 +52,14 @@ Everything else scales with evidence and risk.
 
 When the user asks to iterate quickly or gives a series of distinct small corrections: make the warranted edit, run the cheapest check that catches the likely mistake, report what changed and what ran, then stop. Keep full suites and screenshot rounds for a failure, a real risk, or the release boundary. Cadence changes; correctness and authorization do not. A correction that repeats means the workflow failed; re-ground the surface as product judgment step 8 describes.
 
+## Expand the budget when it helps
+
+Budget expansion is always an option to consider, not a default or a promise of success. Use high-level judgment to reconsider planned effort, research, tokens, review, and iteration when more work could materially improve the requested outcome. Do not let an initial estimate or a fast cadence force an incomplete result.
+
+Before expanding, identify the unresolved requirement, what the extra effort will enable, and how to judge whether it worked. Within existing authorization and available resources, increase the working budget and state the reason briefly; do not ask for permission merely to continue necessary work. Treat a user's "expand budget" instruction as authorization for more effort toward the current goal, preserving completed work and accepted decisions.
+
+A working estimate is not an explicit user limit, a harness limit, or a spending authorization. When expansion needs one of those to change, offer the concrete option and obtain the required approval. Do not claim that a runtime limit, model setting, or account quota changed unless it actually did.
+
+Repeated failure calls for better evidence, a different method, or a more suitable capability before more of the same work. Reassess the value of extra effort as evidence changes. Stop when the outcome is complete or further effort has no credible path to improvement, and report any remaining gap honestly.
+
 This skill improves judgment; it does not replace dedicated correctness, security, performance, architecture, accessibility, or domain review.
