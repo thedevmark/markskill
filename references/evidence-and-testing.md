@@ -12,6 +12,7 @@ Use this reference when a claim depends on rendered, runtime, or behavioral evid
 - Stabilize visual evidence
 - Test behavior, not only appearance
 - Test accessibility by state and pattern
+- Keep the suite proportionate
 - Use automation without outsourcing judgment
 - Report verification precisely
 
@@ -110,6 +111,15 @@ A visual baseline can preserve an existing bad design. Review the baseline itsel
 - Confirm that responsive reordering preserves reading and focus order.
 
 Component stories are useful for controlled state coverage. Page and end-to-end tests remain necessary for layout relationships, routing, focus transitions, and real workflows.
+
+## Keep the suite proportionate
+
+A test is a standing cost: it runs on every change, breaks when behavior is changed on purpose, and has to be read and kept green. Add one when it guards something that would otherwise break silently and matter (security, money, data loss, a fairness rule, a contract other code depends on). Do not add one by reflex for every change, and do not keep tests that only restate settled implementation details, read source text, or assert that a value equals itself.
+
+- When a suite grows faster than the product, or most test files change in the same commits as the code they test, the tests are tracking churn rather than protecting behavior. Cut the suite back to a small core.
+- Prefer rendered, behavioral, or captured evidence for visual and feel work; a snapshot test of a moving visual mostly records that it moved.
+- When behavior is changed on purpose, update or delete the test that encoded the old behavior in the same change; do not loosen a check to get a result through.
+- Keep the full run fast enough that it is actually run, and never let a test print a huge object graph on failure (it can exhaust memory).
 
 ## Test accessibility by state and pattern
 
