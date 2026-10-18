@@ -17,6 +17,12 @@ Before searching the codebase, read the project record where it exists: `AGENTS.
 
 If the request bundles independent subsystems, split it into units that each leave working software, and start the first.
 
+## Research across languages
+
+When researching open-source projects, tools, or technical approaches, consider whether English-only discovery could miss useful work. When another language community could materially improve the search, use relevant native-language terms alongside English queries and inspect original upstream repositories, documentation, and issues. Choose languages from the topic and evidence; there is no fixed language quota. Distinguish independent implementations from forks, translations, and wrappers.
+
+Apply the same standards to every candidate: task fit, source ownership, maintenance, platform support, code and model licenses, dependencies, operating costs, and observed runtime behavior. Translate enough to verify the relevant claims; label unresolved meaning or evidence. Language, stars, and README claims do not establish quality. Keep research proportionate: routine fixes and adequately supported decisions do not require a multilingual survey.
+
 ## Route
 
 - **Product surfaces** (interfaces, copy, interaction, visuals, promotional assets): read [product judgment](references/design-restraint.md). Load [visual and interaction](references/visual-and-interaction.md), [writing and copy](references/writing-and-copy.md), or [promotional assets and feedback](references/promotional-assets-and-feedback.md) only when the task needs that detail. Before writing copy, read the product's authored text and match its voice; if none exists, state the voice assumed.
