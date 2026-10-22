@@ -87,6 +87,24 @@ Write the direction as a contract of four short blocks: the one idea this surfac
 
 Avoid vague directions such as "modern," "premium," or "not AI-looking." Do not mix several unrelated aesthetics. Keep the area around the signature element quiet. Check for a second-order default: replacing one cliché with the same tasteful serif, warm-paper palette, asymmetric hero, or stock accent used in every prior cleanup is still convergence.
 
+### Text admission rule
+
+Space is part of the composition. Do not describe a quiet corner, margin, or gap as a defect merely because it contains no text. Never add copy to make a surface feel finished, balanced, branded, technical, editorial, reassuring, or less empty.
+
+Before adding a text element, identify the specific information the user lacks at that point and the task, decision, state, or consequence that depends on it. If none exists, omit the element. A user's explicitly requested authored text can stand on its own; do not surround it with more explanation. Do not invent an orientation problem to justify a label.
+
+Reject decorative microcopy by default: corner captions, repeated product names, eyebrow labels, footer mottos, redundant subheads, helper sentences that restate the visible action, ambient status messages, and tooltips that explain the obvious. These are content defects, not font-size defects. Making them larger, moving them, hiding them behind hover, or replacing them with a synonym does not fix them. Remove the element without adding a replacement.
+
+Necessary field labels, real scores and timers, actionable errors, consequential warnings, and disclosure of fictional examples remain when they convey required information. Name the exact dependency; "context," "personality," "orientation," or "branding" alone is not evidence. Do not remove accessibility semantics with visual filler. Do not use this rule to erase authored copy or useful information the user requested.
+
+At the finishing gate, inspect the whole rendered composition, including corners, edges, below the main title, cards, end states, downloaded images, and social exports. Temporarily remove each secondary text element. If the task, meaning, or explicitly requested composition loses nothing, leave it removed. Check sibling surfaces so the same filler does not survive in an export or return in the next state.
+
+Examples:
+- A title screen already has its wordmark and approved tagline. Leave its corners and footer unlettered; do not add a mode caption, repeated name, or instructions that belong in the controls.
+- A result card already names the game and presents scores. Do not repeat its name in a corner or add a slogan beneath the results. Keep the score labels and any necessary sample disclosure.
+- A control already says "Save image." Do not add "Download your image below" or an equivalent tooltip. Keep a real failure message if saving fails.
+- A live round needs a countdown and a voting command. Keep those, at useful reading size, because players need them to act.
+
 ### 4. Make the words earn their space
 
 Read `references/writing-and-copy.md` when the task rewrites more than a few strings of interface, landing-page, public-facing, or explanatory copy. Review the whole interaction or reading path before rewriting isolated strings.
@@ -158,7 +176,7 @@ If the design is implemented in code, apply `references/code-restraint.md` after
 3. Render the result when possible. Inspect desktop and mobile together in one batched pass, including short and long content; add wide or intermediate layouts when the surface needs them.
 4. Exercise hover, focus, active, loading, empty, error, success, disabled, and reduced-motion states that exist in scope.
 5. Prefer the project's existing test and story stack. Stabilize fonts, assets, motion, data, and environment before treating screenshot differences as product differences.
-6. Read visible copy aloud. Remove text that merely restates nearby text or visuals.
+6. Apply the text admission rule to the render and all sibling exports. Read visible copy aloud. Remove text that merely restates nearby text or visuals; do not replace it with another caption.
 7. For web surfaces, inspect the rendered page as a whole for run-on or repeated copy, text shrunk to make a layout fit, serial pills and horizontal rules, and font choices that diverge from the product's established roles. Fix the pattern across the surface, not just the most visible instance. If rendering is unavailable, report that visual check as unverified.
 8. Fix scoped findings in a coherent batch and verify the result. Repeat only when a new change, failure, or unresolved concern justifies another pass. Stop when the requested outcome and required checks are complete; do not leave known defects because a pass limit was reached.
 

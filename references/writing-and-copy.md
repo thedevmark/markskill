@@ -32,6 +32,8 @@ Find the voice in the product's existing authored copy, documentation, and accep
 
 Choose the shortest truthful line that makes the next decision easier.
 
+First decide whether any line belongs there. Follow the [text admission rule](design-restraint.md#text-admission-rule): intentional space does not need a caption, repeated brand, explanatory aside, or tooltip. If deleting secondary copy loses no necessary information or requested authored content, delete the element instead of improving its wording. Check exported cards and end states as well as the main screen.
+
 ## Match register and tone to the surface
 
 - **Persuade:** earn attention with a specific promise, mechanism, tension, or proof. Allow more personality, but do not confuse performance with substance.

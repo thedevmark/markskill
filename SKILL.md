@@ -41,6 +41,7 @@ These do not scale with task size, speed, or pressure:
 - Never invent proof: metrics, testimonials, customers, people, benchmarks, prices, or capabilities.
 - Never delete validation, authorization, recovery, or observability to shrink a diff.
 - Never present inference as observation. Label findings source-confirmed, render-observed, test-confirmed, inferred, or reported.
+- Never add decorative microcopy: corner captions, eyebrow labels, redundant helper lines, repeated branding, footer slogans, or tooltips that add no needed information. Intentional space is part of the composition, not a vacancy to fill. "Polish," "orientation," "editorial detail," and "branding" do not justify filler. Delete it; do not shrink, move, or rewrite it. Apply this rule to screens, cards, overlays, and exports. See the [text admission rule](references/design-restraint.md#text-admission-rule).
 
 Everything else scales with evidence and risk.
 
@@ -52,7 +53,7 @@ Everything else scales with evidence and risk.
 - Prefer a direct, readable solution. Do not use simplicity to excuse an incomplete migration, caller-only patch, missing state, or known edge case. If the work is already fit, say so and stop.
 - Diagnose scope when the symptom may understate the problem. Local repair, shared-owner correction, structural refactor, staged migration, and replacement are all valid outcomes.
 - Resolve ambiguity by reading the code, the record, and the runtime first. Ask only what survives investigation and would change the work, as one question.
-- Check the finished surface for overlong copy, run-on sentences, tiny text, gratuitous pills and dividers, and fonts that drift from the product before calling polish complete.
+- Before calling polish complete, inspect the finished surface and its exports for unrequested microcopy in corners, margins, beneath titles, and inside cards. Remove text with no distinct necessary job, then check overlong copy, tiny type, gratuitous pills and dividers, and font drift. Larger type does not make filler acceptable.
 
 ## Fast iteration
 
