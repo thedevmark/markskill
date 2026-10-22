@@ -47,6 +47,16 @@ Updating the record inside the repository is part of applying this skill and nee
 - Date every decision as an absolute date.
 - Prefer a path over a description. `src/tokens.css` beats "the tokens file".
 
+## Reconcile the record
+
+At meaningful completion points in substantial work, integrations, and releases, review the touched documentation and its entry links. Also do this when conflicting instructions, broken paths, completed plans still marked pending, or repeated rediscovery reveal drift. Do not inventory every Markdown file after every small edit.
+
+Keep one current authority for each contract. Compare integration specs, setup instructions, ownership maps, release notes, and pending-work lists with the final source and observed result. Correct stale commands and paths, merge duplicate current guidance into its owner, and update incoming links in the same change. Close fulfilled requirements explicitly. Keep unfinished requirements visible; deleting the plan does not complete them.
+
+Distinguish working guidance from historical evidence. Date and mark a superseded spec as historical, with a pointer to its replacement, when its decisions or evidence still matter. Remove temporary or redundant notes only after checking references and confirming that they contain no unique requirement, accepted decision, recovery information, or required audit history. Respect retention and ownership restrictions; uncertain deletion is not routine cleanup.
+
+Do not add another status report to explain conflicting status reports. Reconcile the existing owner, then record only the remaining decisions, proof boundaries, and unfinished work. Summarize the maintenance performed with the task result; no separate audit document is required for a routine cleanup.
+
 ## Bootstrapping a record
 
 On the first task in a repository without a record, do not run an interview by default. Derive the confirmed facts from the README, existing copy, tokens, tests, and package configuration, write only those, and list open questions under an `Undecided` heading. Ask the user only the questions whose answers change the current task. Never fill a section with plausible generic prose to make the record look complete.

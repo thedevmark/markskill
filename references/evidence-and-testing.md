@@ -121,6 +121,18 @@ A test is a standing cost: it runs on every change, breaks when behavior is chan
 - When behavior is changed on purpose, update or delete the test that encoded the old behavior in the same change; do not loosen a check to get a result through.
 - Keep the full run fast enough that it is actually run, and never let a test print a huge object graph on failure (it can exhaust memory).
 
+## Maintain the suite
+
+Regularly reconcile the tests in the area being changed, especially after a refactor, an integration, repeated fixture churn, or a substantial feature reaches completion. Inspect existing coverage before adding more files. Do not create a second suite for the same contract just because another agent or session owns the change.
+
+- Group cases that protect the same behavior under its current owner. Share stable fixture setup when it reduces repetition without sharing live mutable state or hiding the scenario.
+- Before consolidating or removing a test, identify its distinct invariant, failure case, and consumer. Retain those checks in the surviving suite. Remove a duplicate only when the same meaningful failure remains detectable.
+- Replace assertions tied to obsolete implementation details with checks of the current contract. Retire tests for intentionally removed behavior; do not preserve contradictory specifications or weaken an inconvenient regression test.
+- Remove unused fixtures, helpers, snapshots, and runner entries after checking their consumers. Consolidation should reduce maintenance cost, not merely file count or test count.
+- Run the affected surviving checks once. Broaden only for a specific uncovered integration risk or required release gate; do not turn cleanup into repeated whole-suite runs.
+
+Report the coverage preserved and any intentional coverage removal. Never claim that a smaller suite proves more merely because it passes faster.
+
 ## Test accessibility by state and pattern
 
 - Run the project's existing automated accessibility checks after each important state becomes visible; hidden menus, dialogs, errors, and toasts are not covered by an initial-page scan.

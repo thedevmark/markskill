@@ -59,6 +59,10 @@ Everything else scales with evidence and risk.
 
 When the user asks to iterate quickly or gives a series of distinct small corrections: make the warranted edit, run the cheapest check that catches the likely mistake, report what changed and what ran, then stop. Keep full suites and screenshot rounds for a failure, a real risk, or the release boundary. Cadence changes; correctness and authorization do not. A correction that repeats means the workflow failed; re-ground the surface as product judgment step 8 describes.
 
+## Maintain what accumulates
+
+At meaningful completion points in substantial work, integration, and releases, review the touched area for accumulated maintenance debt: duplicate or obsolete tests, stale Markdown, superseded integration specs, abandoned compatibility paths, and temporary artifacts. Consolidate around the current owner, correct or retire outdated instructions, and close completed plans. Preserve distinct behavioral coverage, authored decisions, and necessary history. Use [suite maintenance](references/evidence-and-testing.md#maintain-the-suite) and [record maintenance](references/project-record.md#reconcile-the-record) for the checks. This is regular scoped maintenance, not a new repository-wide audit after every small edit or a reason to postpone the requested result.
+
 ## Expand the budget when it helps
 
 Budget expansion is always an option to consider, not a default or a promise of success. Use high-level judgment to reconsider planned effort, research, tokens, review, and iteration when more work could materially improve the requested outcome. Do not let an initial estimate or a fast cadence force an incomplete result.
