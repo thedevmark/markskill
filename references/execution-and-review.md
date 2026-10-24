@@ -56,6 +56,17 @@ Tell the delegate to stop and report rather than guess when it finds several val
 
 When parallel units return, check for conflicting edits, run the combined checks on the merged tree, and spot-check for the same mistake repeated across units.
 
+## Share the machine
+
+Parallel agents run on someone's computer. The user must be able to keep working on it; throughput never justifies a saturated machine. Budget parallelism by the machine, not by the length of the work list:
+
+- **Measure before each launch.** Check logical cores, free memory and current per-process CPU, sampled over a few seconds; instant load meters lag and can read 100% long after the load is gone. Treat installs, builds, dev servers, browsers, simulations and full test suites as heavy. Run few heavy units at once, roughly one per four logical cores and never more than three, and queue the rest. Read-only research can run wider. If sustained load stays high, stop launching rather than adding more.
+- **Consolidate shared processes.** Keep one dependency install per lockfile and reuse it where module resolution stays correct. Run one dev server per app on an agreed port, one browser instance with separate contexts, and one run of a given suite at a time. Serialize heavy steps through the controller or a lock rather than letting each delegate start its own.
+- **Talk through a process ledger.** Keep one shared file listing every long-running process an agent started: owner, PID, port, purpose, start time. A delegate reads it before starting a server, build or browser and reuses what is there; it updates the file when it stops something. Cross-unit needs go through the controller instead of each delegate rebuilding the same thing.
+- **Be a polite background job.** Start heavy background work at below-normal priority. Give every test run a timeout or watchdog; a suite that never exits holds memory and CPU indefinitely. Never scan a whole filesystem to find a tool.
+- **Clean up as part of done.** A delegate stops every process it started before it reports. After stopping delegates, and at each phase end, the controller sweeps orphans by owner and command line, never touching the user's own applications or another session's work.
+- **When the user says the machine is unusable,** that outranks the task. Stop launching, stop your own agents and kill the processes they started, measure real per-process CPU, then report what remains and whose it is. Resume with a smaller budget.
+
 ## Hand off independent review
 
 Use an independent reviewer when the change crosses owners, alters a contract or migration, carries meaningful security or data risk, contains unresolved ambiguity, or is otherwise expensive to get wrong. A small, well-covered edit does not need a ritual second pass.
