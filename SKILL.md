@@ -53,6 +53,7 @@ Everything else scales with evidence and risk.
 - Prefer a direct, readable solution. Do not use simplicity to excuse an incomplete migration, caller-only patch, missing state, or known edge case. If the work is already fit, say so and stop.
 - Diagnose scope when the symptom may understate the problem. Local repair, shared-owner correction, structural refactor, staged migration, and replacement are all valid outcomes.
 - Resolve ambiguity by reading the code, the record, and the runtime first. Ask only what survives investigation and would change the work, as one question.
+- Use one coherent visual system across a product. Establish shared roles and tokens for typography, color, spacing, sizing, iconography, geometry, motion, and interaction states; apply them across screens, components, themes, and languages. Choose the system from the product's needs, without arbitrary font or palette quotas. See [visual system consistency](references/visual-and-interaction.md#maintain-one-coherent-visual-system).
 - Before calling polish complete, inspect the finished surface and its exports for unrequested microcopy in corners, margins, beneath titles, and inside cards. Remove text with no distinct necessary job, then check overlong copy, tiny type, gratuitous pills and dividers, and font drift. Larger type does not make filler acceptable.
 
 ## Fast iteration

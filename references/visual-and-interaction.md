@@ -8,6 +8,7 @@ Use this reference for layouts, component systems, typography, color, dashboards
 - Match structure to the surface mode
 - Separate source evidence from rendered evidence
 - Diagnose observable visual tells
+- Maintain one coherent visual system
 - Build hierarchy
 - Align deliberately
 - Control spacing and geometry
@@ -94,6 +95,15 @@ No tell is automatically wrong. Flag it when it is repeated, unearned, inconsist
 | Modal for a plain task | Interrupts and traps focus for work that needed neither | Use an inline region, a sheet, or a page |
 | Clipped dropdown | A menu is cut off by an ancestor's overflow | Render it in a dialog, popover, or portal layer |
 | Design-system drift | Near-duplicate colors, sizes, radii, and spacing accumulate | Classify each: missing token, one-off that a shared component replaces, conceptual mismatch with a comparable area, or local defect; fix at the narrowest correct level |
+
+## Maintain one coherent visual system
+
+- Define the product's visual language before refining individual screens. Reuse its existing design system where it remains fit; resolve conflicting rules at the shared owner instead of adding page-specific exceptions.
+- Give typography, semantic colors, spacing, control and icon sizes, borders, radii, elevation, and motion named roles. Implement those roles through shared tokens and components at the scale the product needs. Repeated values should follow a deliberate scale rather than accumulate as unrelated local choices.
+- Use the same rules for the same semantic role across the game or application, its website, settings, dialogs, onboarding, and exports. Give purposeful differences a clear role, such as display art, dense data, a touch target, or a platform convention. Preserve each surface's job and the brand's authored character.
+- Choose font families, weights, palette breadth, and size steps from legibility, hierarchy, content, identity, and technical constraints. Do not substitute an arbitrary count of fonts, colors, or sizes for a coherent system.
+- Carry the system across languages, themes, and input modes. Verify glyph coverage, script shaping, optical weight, baselines, line height, text expansion, contrast, zoom, and touch targets. Use deliberately matched script companions and metric-compatible fallbacks; preserve the user's required lettering and assets.
+- Review representative screens and states together at actual sizes. Compare equivalent headings, controls, panels, focus, hover, disabled, selected, loading, and error states. Correct unexplained differences in the tokens or component owner, then inspect the rendered result; a token inventory alone does not prove visual consistency.
 
 ## Build hierarchy
 
