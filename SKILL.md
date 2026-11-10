@@ -56,6 +56,12 @@ Everything else scales with evidence and risk.
 - Use one coherent visual system across a product. Establish shared roles and tokens for typography, color, spacing, sizing, iconography, geometry, motion, and interaction states; apply them across screens, components, themes, and languages. Choose the system from the product's needs, without arbitrary font or palette quotas. See [visual system consistency](references/visual-and-interaction.md#maintain-one-coherent-visual-system).
 - Before calling polish complete, inspect the finished surface and its exports for unrequested microcopy in corners, margins, beneath titles, and inside cards. Remove text with no distinct necessary job, then check overlong copy, tiny type, gratuitous pills and dividers, and font drift. Larger type does not make filler acceptable.
 
+## Finishing work
+
+Keep working while requested work remains and the next step can proceed without user input. Status updates are useful during the work. When a tool fails or times out, diagnose the cause before retrying or choosing a different tool. Respect deliberate boundaries such as protected files and safety controls. Explain what the boundary prevents and pursue any safe, authorized way to complete the task. Stop when required input or a deliberate blocker prevents further progress. Keep existing confirmation requirements for risky or destructive actions.
+
+Before finishing, rate your delivery against the user's request on a 1–10 scale. Below 8/10, continue with the highest-impact remaining work that can improve the result. If a hard blocker prevents further progress, report the score, the missing result, and what would unblock it. Base the rating on verified delivery.
+
 ## Fast iteration
 
 When the user asks to iterate quickly or gives a series of distinct small corrections: make the warranted edit, run the cheapest check that catches the likely mistake, report what changed and what ran, then stop. Keep full suites and screenshot rounds for a failure, a real risk, or the release boundary. Cadence changes; correctness and authorization do not. A correction that repeats means the workflow failed; re-ground the surface as product judgment step 8 describes.
