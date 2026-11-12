@@ -48,6 +48,7 @@ These do not scale with task size, speed, or pressure:
 - Never delete validation, authorization, recovery, or observability to shrink a diff.
 - Never present inference as observation. Label findings source-confirmed, render-observed, test-confirmed, inferred, or reported.
 - Never add decorative microcopy: corner captions, eyebrow labels, redundant helper lines, repeated branding, footer slogans, or tooltips that add no needed information. Intentional space is part of the composition, not a vacancy to fill. "Polish," "orientation," "editorial detail," and "branding" do not justify filler. Delete it; do not shrink, move, or rewrite it. Apply this rule to screens, cards, overlays, and exports. See the [text admission rule](references/design-restraint.md#text-admission-rule).
+- Never add standalone explanation when the existing interface can communicate the same information at the right time. Put meaning in the control, label, value, state, or behavior that owns it. A request to change how something works or looks is a request to change the thing itself.
 
 Everything else scales with evidence and risk.
 
