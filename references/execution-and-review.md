@@ -17,7 +17,7 @@ Write complete implementation code in the repository, not in a parallel plan. Sp
 
 A brief is under-specified when it contains "handle edge cases", "add appropriate validation", "tests for the above", "similar to the previous unit", or a name no unit defines. Each of those is deferred ambiguity. If a requirement reads two ways, pick one and write it down. Check that names and signatures used by later units match the units that introduce them.
 
-Before executing a plan, scan it once for internal contradictions and for anything it mandates that would be a defect. Present all of them beside the plan text as one question, then execute without further interruptions. A defect the plan asked for is still a defect; the plan does not grade its own work.
+Before executing a plan, scan it once for internal contradictions and for anything it mandates that would be a defect. Resolve technical contradictions from the requirements and evidence, correct the plan, and continue within the user's authorization. Ask only when a remaining conflict requires information or a decision that belongs to the user; present those conflicts together as one concise question. A defect the plan asked for is still a defect; the plan does not grade its own work.
 
 ## Preserve recoverable progress
 
