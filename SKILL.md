@@ -31,7 +31,7 @@ Apply the same standards to every candidate: task fit, source ownership, mainten
 
 ## Route
 
-- **Product surfaces** (interfaces, copy, interaction, visuals, promotional assets): read [product judgment](references/design-restraint.md). Load [visual and interaction](references/visual-and-interaction.md), [writing and copy](references/writing-and-copy.md), or [promotional assets and feedback](references/promotional-assets-and-feedback.md) only when the task needs that detail. Before writing copy, read the product's authored text and match its voice; if none exists, state the voice assumed.
+- **Product surfaces** (interfaces, copy, interaction, visuals, promotional assets): read [product judgment](references/design-restraint.md). Pass its [pre-composition gate](references/design-restraint.md#3-pass-the-pre-composition-gate) before building and its [rendered design gate](references/design-restraint.md#rendered-design-gate) before claiming visual completion. Load [visual and interaction](references/visual-and-interaction.md), [writing and copy](references/writing-and-copy.md), or [promotional assets and feedback](references/promotional-assets-and-feedback.md) only when the task needs that detail. Before writing copy, read the product's authored text and match its voice; if none exists, state the voice assumed.
 - **Code** (server, client, API, data, dependencies, debugging, refactoring): read [engineering judgment](references/code-restraint.md). Read [evidence and testing](references/evidence-and-testing.md) when a claim crosses from source into rendered, runtime, database, or production behavior.
 - **Long, delegated, or risky work**: read [execution and review](references/execution-and-review.md) before delegating or handing off a review, including to another agent or another vendor's model.
 - **A target grade from an independent reviewer** ("keep going until it gets an A+"): read [graded review loop](references/graded-review-loop.md) as well as execution and review.
@@ -47,9 +47,9 @@ These do not scale with task size, speed, or pressure:
 - Never invent proof: metrics, testimonials, customers, people, benchmarks, prices, or capabilities.
 - Never delete validation, authorization, recovery, or observability to shrink a diff.
 - Never present inference as observation. Label findings source-confirmed, render-observed, test-confirmed, inferred, or reported.
-- Never add decorative microcopy: corner captions, eyebrow labels, redundant helper lines, repeated branding, footer slogans, or tooltips that add no needed information. Intentional space is part of the composition, not a vacancy to fill. "Polish," "orientation," "editorial detail," and "branding" do not justify filler. Delete it; do not shrink, move, or rewrite it. Apply this rule to screens, cards, overlays, and exports. See the [text admission rule](references/design-restraint.md#text-admission-rule).
-- Never add standalone explanation when the existing interface can communicate the same information at the right time. Put meaning in the control, label, value, state, or behavior that owns it. A request to change how something works or looks is a request to change the thing itself.
-- Never turn a build requirement, internal rule, or developer term into user-facing copy by default. Enforce rules in the product. Surface only the action, consequence, or correction the user needs at that moment.
+- Never add decorative microcopy: corner captions, eyebrow labels, redundant helper lines, repeated branding, footer slogans, or obvious tooltips. Intentional space is not a vacancy to fill. Delete filler; do not shrink, move, or rewrite it. Apply the [text admission rule](references/design-restraint.md#text-admission-rule) to screens, overlays, and exports.
+- Never turn a build requirement, internal rule, or developer term into user-facing copy by default. Enforce it in the product. Put necessary meaning in the control, label, value, state, or behavior that owns it before adding standalone explanation. Surface the action, consequence, or correction the user needs at that moment.
+
 
 Everything else scales with evidence and risk.
 
@@ -62,7 +62,6 @@ Everything else scales with evidence and risk.
 - Diagnose scope when the symptom may understate the problem. Local repair, shared-owner correction, structural refactor, staged migration, and replacement are all valid outcomes.
 - Resolve ambiguity by reading the code, the record, and the runtime first. Ask only what survives investigation and would change the work, as one question.
 - Use one coherent visual system across a product. Establish shared roles and tokens for typography, color, spacing, sizing, iconography, geometry, motion, and interaction states; apply them across screens, components, themes, and languages. Choose the system from the product's needs, without arbitrary font or palette quotas. See [visual system consistency](references/visual-and-interaction.md#maintain-one-coherent-visual-system).
-- Before calling polish complete, inspect the finished surface and its exports for unrequested microcopy in corners, margins, beneath titles, and inside cards. Remove text with no distinct necessary job, then check overlong copy, tiny type, gratuitous pills and dividers, and font drift. Larger type does not make filler acceptable.
 
 ## Finishing work
 

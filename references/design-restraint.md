@@ -73,41 +73,26 @@ Read `references/evidence-and-testing.md` for implementation, audit, or verifica
 - Make the design assessment before reading linter or detector findings when practical. Mechanical findings should not anchor the taste judgment.
 - Treat a clean detector, linter, or accessibility scan as a floor. It cannot prove that writing is human, hierarchy is clear, or the design is good.
 
-### 3. Commit to one direction
+### 3. Pass the pre-composition gate
 
-Use the product's existing visual language first. Otherwise define one concrete direction through:
+Before creating or revising a surface, settle these decisions in a compact internal note or sketch. For a small correction, recheck only what it changes. This is working reasoning, never copy to paste into the product.
 
-- hierarchy and focal point;
-- density and whitespace;
-- geometry and alignment;
-- typography and color roles;
-- a subject-derived signature element when the surface benefits from one; do not invent decoration to satisfy a quota.
+- **Job and identity:** Name the user's task, next action, and the product's authored visual anchors. State what each reference supplies: workflow, behavior, layout, or visual identity. Borrowing a workflow does not authorize replacing the product's character, assets, typography, or color roles.
+- **Requirement ownership:** Map each requirement to the behavior, data, control, or state that satisfies it. Admit visible copy only when the user needs that information to act or understand a consequence. A requirement is not satisfied by a sentence describing it; a new requirement does not imply a new paragraph, badge, or card.
+- **Visible content:** Choose the necessary labels, values, actions, and state feedback. Apply the text admission rule below before drafting supporting copy. Name the existing element that owns each fact; do not add an explainer above and below the same control.
+- **Composition:** Establish the focal point, reading order, primary action, grouping, and readable type roles with real content at the intended display size. Give every enclosing box a distinct functional boundary. Use spacing and alignment where no boundary exists. Name what makes the composition belong to this product beyond swapped nouns and colors.
 
-Write the direction as a contract of four short blocks: the one idea this surface owns and the category default it refuses; the palette and component language that stays recognizable with the content removed; what the visitor understands and does; and the first-viewport composition with the primary action's position. A block that reads like a mood is an undecided direction. The finishing review audits the render against this contract.
-
-Avoid vague directions such as "modern," "premium," or "not AI-looking." Do not mix several unrelated aesthetics. Keep the area around the signature element quiet. Check for a second-order default: replacing one cliché with the same tasteful serif, warm-paper palette, asymmetric hero, or stock accent used in every prior cleanup is still convergence.
+Do not start composing with an unresolved content or hierarchy problem. Remove unsupported elements or change the structure; do not plan to rescue it later with helper copy, nested cards, or smaller type. Keep existing visual choices that remain fit. When creating a direction, specify concrete relationships rather than moods such as "modern" or "premium"; replacing one generic template with another is not authorship.
 
 ### Text admission rule
 
-Space is part of the composition. Do not describe a quiet corner, margin, or gap as a defect merely because it contains no text. Never add copy to make a surface feel finished, balanced, branded, technical, editorial, reassuring, or less empty.
+Before adding text, name the information the user lacks now and the task, decision, or consequence that depends on it. If there is none, omit the element. Space needs no caption. "Polish," "orientation," "reassurance," and "branding" alone do not establish a need.
 
-Before adding a text element, identify the specific information the user lacks at that point and the task, decision, state, or consequence that depends on it. If none exists, omit the element. A user's explicitly requested authored text can stand on its own; do not surround it with more explanation. Do not invent an orientation problem to justify a label.
+Put needed meaning in its owning element first: an action in its button, selection in its control, a unit beside its value, and a correctable error by its field. Fix unclear behavior or visuals before adding an explanation. Do not overload labels with prose or hide essential guidance until after a preventable mistake. Keep instructions, disclosures, and warnings visible in time to act, with accessible names and feedback intact.
 
-When the information is needed, integrate it into the element that owns it before adding a separate line above, below, or beside that element. Name the action in the button, show selection or progress in the affected control, put a unit beside the value it qualifies, and give a correctable input rule through the field's validation when relevant. If a visual or behavior is unclear, fix it directly before considering a caption. Keep essential instructions, disclosures, and warnings visible in time to act on them, and preserve accessible names and feedback. In review, point to the element that communicates each fact and delete any duplicate explanation.
+For each line, ask what the user can do, decide, or correct because they read it now. Remove lines that merely report internal rules, repeat the build brief, or explain an already clear control. Reject decorative corner captions, repeated branding, eyebrow labels, footer mottos, redundant subheads, ambient status, and obvious tooltips. These are content defects: resizing, relocating, rewording, or hiding them behind hover does not fix them. Delete the element without a replacement.
 
-Audit copy from the user's position. For each line, ask what the user can do, decide, or correct because they read it now. If the line only reports what the product does internally or repeats the implementation brief, remove it. Check default, in-progress, error, and success states so the same detail does not return as a tooltip, status message, or confirmation.
-
-Reject decorative microcopy by default: corner captions, repeated product names, eyebrow labels, footer mottos, redundant subheads, helper sentences that restate the visible action, ambient status messages, and tooltips that explain the obvious. These are content defects, not font-size defects. Making them larger, moving them, hiding them behind hover, or replacing them with a synonym does not fix them. Remove the element without adding a replacement.
-
-Necessary field labels, real scores and timers, actionable errors, consequential warnings, and disclosure of fictional examples remain when they convey required information. Name the exact dependency; "context," "personality," "orientation," or "branding" alone is not evidence. Do not remove accessibility semantics with visual filler. Do not use this rule to erase authored copy or useful information the user requested.
-
-At the finishing gate, inspect the whole rendered composition, including corners, edges, below the main title, cards, end states, downloaded images, and social exports. Temporarily remove each secondary text element. If the task, meaning, or explicitly requested composition loses nothing, leave it removed. Check sibling surfaces so the same filler does not survive in an export or return in the next state.
-
-Examples:
-- A title screen already has its wordmark and approved tagline. Leave its corners and footer unlettered; do not add a mode caption, repeated name, or instructions that belong in the controls.
-- A result card already names the game and presents scores. Do not repeat its name in a corner or add a slogan beneath the results. Keep the score labels and any necessary sample disclosure.
-- A control already says "Save image." Do not add "Download your image below" or an equivalent tooltip. Keep a real failure message if saving fails.
-- A live round needs a countdown and a voting command. Keep those, at useful reading size, because players need them to act.
+Preserve necessary labels, scores, timers, actionable errors, consequential warnings, and fictional-example disclosures. Preserve explicitly requested authored text and established voice; do not surround them with more explanation. For example, keep an approved title-screen tagline, leave its empty corners unlettered, and do not repeat the wordmark in its footer. A "Save image" control needs no "Download your image below" caption; it still needs real failure feedback. A live countdown and voting command stay visible at useful reading sizes because players need them to act.
 
 ### 4. Make the words earn their space
 
@@ -175,26 +160,19 @@ Automated accessibility checks are evidence, not proof. Pair them with keyboard,
 
 If the design is implemented in code, apply `references/code-restraint.md` after locating the behavior's real owner and callers. Let the required outcome determine whether the surface needs a local revision, structural recomposition, interaction redesign, or replacement.
 
-1. Name the high-noise elements with selectors, components, annotations, or tight file references.
-2. Make surgical edits when the structure works. Rebuild when the information architecture, interaction model, or implementation is the problem and the authorized outcome requires it.
-3. Render the result when possible. Inspect desktop and mobile together in one batched pass, including short and long content; add wide or intermediate layouts when the surface needs them.
-4. Exercise hover, focus, active, loading, empty, error, success, disabled, and reduced-motion states that exist in scope.
-5. Prefer the project's existing test and story stack. Stabilize fonts, assets, motion, data, and environment before treating screenshot differences as product differences.
-6. Apply the text admission rule to the render and all sibling exports. Read visible copy aloud. Remove text that merely restates nearby text or visuals; do not replace it with another caption.
-7. For web surfaces, inspect the rendered page as a whole for run-on or repeated copy, text shrunk to make a layout fit, serial pills and horizontal rules, and font choices that diverge from the product's established roles. Fix the pattern across the surface, not just the most visible instance. If rendering is unavailable, report that visual check as unverified.
-8. Fix scoped findings in a coherent batch and verify the result. Repeat only when a new change, failure, or unresolved concern justifies another pass. Stop when the requested outcome and required checks are complete; do not leave known defects because a pass limit was reached.
+Identify defects with selectors, components, annotations, or tight file references. Make local edits when the structure works; recompose when the information architecture or interaction is the problem. Use the project's existing test and story stack. Stabilize fonts, assets, motion, data, and environment before judging screenshot differences.
+
+#### Rendered design gate
+
+Before claiming visual completion, inspect the final whole surface at its intended display size, not only a thumbnail, enlarged crop, DOM tree, or bounding-box report. Batch relevant desktop and mobile widths and real short and long content. Inspect changed interaction states and sibling exports where they can repeat the defect. Judge these separately from functional and overflow checks:
+
+- **Identity and hierarchy:** Compare the render with the pre-composition decisions. Name what the eye sees first and the next action. Confirm that authored product character survived borrowed workflows, and that grouping and emphasis still read when detail is blurred. A generic form or dashboard does not pass merely because it uses the brand color.
+- **Text admission:** Read every visible line in context, including text above and below controls, corners, cards, tooltips, and end states. Temporarily remove secondary copy. If no necessary meaning or requested authored content is lost, leave it removed. No requirement narration or duplicate explanation may remain.
+- **Readable type:** Inspect actual sizes, weight, contrast, and wrapping at normal scale; on web surfaces, check computed values against established type roles and the [typography floors](visual-and-interaction.md#use-typography-intentionally). Necessary labels, guidance, and actions must be comfortably readable. Do not shrink text to preserve a crowded layout, or enlarge filler to justify keeping it.
+- **Structure:** Trace the visible enclosure depth. Remove boxes without distinct functional boundaries and repeated pills or dividers without a structural job. Spacing, alignment, and type must carry the reading order without a card for each requirement or an explainer for each control.
+
+Record a concrete rendered observation for each applicable check, not just "browser checked" or "no overflow." Fix failures in one coherent batch, then recheck the affected result. Repeat only for a new change, failure, or unresolved concern. If a render cannot be inspected, mark visual verification incomplete; source review and geometry checks cannot pass this gate.
 
 During an active Create or Revise task, treat a diagnostic complaint such as "why does this look wrong?" or "this looks bad" as a request to diagnose and repair unless the user explicitly asks for analysis only. Do not answer repeated corrective feedback with agreement alone. Lead the next update with the concrete defect and the change being made; reserve apology or acknowledgment for one short sentence when it adds value.
 
 If feedback reveals that the concept is wrong rather than merely unpolished, stop local nudging. Re-ground the whole surface, remove the invalid premise, and rebuild a coherent direction before generating another round.
-
-## Completion questions
-
-Use only the questions relevant to the surface; they are judgment prompts, not a report template.
-
-- Can a first-time user understand the page's job and next action?
-- Are claims grounded, states honest, and actions recoverable?
-- Does each text element, container, and visible mark serve structure, state, data, action, or identity?
-- Is the hierarchy clear without explanatory filler, and does it use this product's own language?
-- Does the surface survive real content, narrow widths, keyboard use, zoom, and reduced motion?
-- Did the revision preserve the established choices that remain fit and replace the ones that prevent the required outcome?

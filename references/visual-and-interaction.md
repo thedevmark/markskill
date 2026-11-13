@@ -27,18 +27,7 @@ Use this reference for layouts, component systems, typography, color, dashboards
 
 ## Write a small design brief
 
-Before styling, identify:
-
-- audience and page job;
-- content hierarchy and primary action;
-- real content and states;
-- existing tokens and components;
-- density target;
-- visual direction in concrete terms;
-- a subject-derived signature element when useful;
-- one intentional risk or exception, if any.
-
-The signature should come from the subject, data, interaction, or brand history, not from a stock motif.
+Use the [pre-composition gate](design-restraint.md#3-pass-the-pre-composition-gate) as the brief; do not create a second checklist. Ground any signature element in the subject, data, interaction, or brand history, not a stock motif. Validate the result with the [rendered design gate](design-restraint.md#rendered-design-gate).
 
 ## Match structure to the surface mode
 

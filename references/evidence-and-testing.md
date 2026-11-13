@@ -167,7 +167,8 @@ Before any statement of success, name the check that would prove it, run it on t
 | Tests pass | Tests passed earlier, or on another tree | The suite ran on this tree after the last change |
 | Requirements met | Tests pass | Each requirement mapped to a check or observation |
 | Delegate finished | The delegate's report says done | The diff and its checks were inspected |
-| It renders correctly | Source looks right | The rendered state was observed at the relevant widths |
+| The layout fits | Source looks right | The rendered state was checked for wrapping and overflow at relevant widths |
+| The visual design is ready | A screenshot exists; bounds and overflow pass | The whole rendered composition passed the [rendered design gate](design-restraint.md#rendered-design-gate), with concrete observations |
 
 Hedge words are the tell: if the sentence needs "should", "probably", or "seems", the claim has outrun the evidence. Answer each verification item with a file, selector, computed value, command output, or rendered observation, never with "yes".
 
