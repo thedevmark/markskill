@@ -42,6 +42,7 @@ The claim is "everything the agent builds and ships." Check it against the files
 | Survives real use | `references/design-restraint.md` and `references/visual-and-interaction.md` — keyboard, focus, states, zoom, reduced motion with an intentional alternative, input detection |
 | Claims only what ran | `SKILL.md` unconditional rules; `references/review-and-report.md` claim gate; `references/evidence-and-testing.md` claim table, hedge-word check, runtime and data claims |
 | Iterates without thrashing | `SKILL.md` fast iteration mode; feedback handling in `references/promotional-assets-and-feedback.md` |
+| Plans with context, reviews without it | `references/elephant-goldfish.md` — plan written to a file, fresh-context reviewers by lens (zoom out, comprehension, critic, readiness, drift), swarm sized to the work, skipped for short tasks |
 | Delegates without losing context | `references/execution-and-review.md` — five-part delegation, four-status return, reviewer scope rules, scoped re-verification |
 | Reaches a target grade honestly | `references/graded-review-loop.md` — anchored grade scale, per-item triage, measured efficiency claims, mutation-proven tests, fresh-reviewer confirmation, stop rules |
 
@@ -93,6 +94,7 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 | `references/evidence-and-testing.md` | Evidence lanes and labels, runtime and data claims, claim table, state matrix, stabilization, and reporting |
 | `references/promotional-assets-and-feedback.md` | Store art, thumbnails, social graphics, iterative feedback handling |
 | `references/execution-and-review.md` | Briefs, progress records, delegation and return contracts, independent review, and templates for long or risky work |
+| `references/elephant-goldfish.md` | Plan-first loop for most non-trivial work: the context-holding author writes the plan, fresh reviewers check it by lens before and after building; adapted from Google's Elephant-Goldfish Model |
 | `references/graded-review-loop.md` | Opt-in loop for "review it and keep going until it gets an A+": grade scale, triage, measurement, re-review message, fresh confirmation, and stop rules |
 | `evaluations/protocol.md` | Frozen comparison design, task matrix, scoring, critical failures, and claim boundaries |
 | `evaluations/task-template.md` | Task-package contract for reproducible calibration and holdout cases |

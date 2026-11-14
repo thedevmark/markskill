@@ -1,6 +1,6 @@
 ---
 name: markskill
-description: Use when fixing, refactoring, reviewing, critiquing, or designing code, interfaces, or copy. Covers bug fixes that may be symptom patches, refactor or rewrite decisions, dependency choices, landing-page and UI revisions, copy that reads AI-generated or generic, pre-ship critiques, requests to have an independent reviewer grade work and iterate until a target grade such as A+, and any output that must read as finished authored work rather than filler.
+description: Use when fixing, refactoring, reviewing, critiquing, planning, or designing code, interfaces, or copy. Covers planning non-trivial changes with fresh-context reviewers before building, bug fixes that may be symptom patches, refactor or rewrite decisions, dependency choices, landing-page and UI revisions, copy that reads AI-generated or generic, pre-ship critiques, requests to have an independent reviewer grade work and iterate until a target grade such as A+, and any output that must read as finished authored work rather than filler.
 ---
 
 # markskill
@@ -33,6 +33,7 @@ Apply the same standards to every candidate: task fit, source ownership, mainten
 
 - **Product surfaces** (interfaces, copy, interaction, visuals, promotional assets): read [product judgment](references/design-restraint.md). Pass its [pre-composition gate](references/design-restraint.md#3-pass-the-pre-composition-gate) before building and its [rendered design gate](references/design-restraint.md#rendered-design-gate) before claiming visual completion. Load [visual and interaction](references/visual-and-interaction.md), [writing and copy](references/writing-and-copy.md), or [promotional assets and feedback](references/promotional-assets-and-feedback.md) only when the task needs that detail. Before writing copy, read the product's authored text and match its voice; if none exists, state the voice assumed.
 - **Code** (server, client, API, data, dependencies, debugging, refactoring): read [engineering judgment](references/code-restraint.md). Read [evidence and testing](references/evidence-and-testing.md) when a claim crosses from source into rendered, runtime, database, or production behavior.
+- **Most non-trivial work** (features, refactors, migrations, contract changes, multi-file fixes, plans another agent will run): read [elephant and goldfish](references/elephant-goldfish.md). Write the plan to a file and have fresh-context reviewers check it before you build. Skip it for short tasks: an obvious one-file fix, a copy or config tweak, fast iteration, or a question.
 - **Long, delegated, or risky work**: read [execution and review](references/execution-and-review.md) before delegating or handing off a review, including to another agent or another vendor's model.
 - **A target grade from an independent reviewer** ("keep going until it gets an A+"): read [graded review loop](references/graded-review-loop.md) as well as execution and review.
 - **Any critique or completion report**: read [review and report](references/review-and-report.md) for the claim gate, severity tiers, and report shapes.

@@ -1,6 +1,6 @@
 # Execution and independent review
 
-Use this reference only when work is long, multi-stage, delegated, vulnerable to context loss, or risky enough that an independent review can materially improve confidence. Ordinary fixes stay direct: inspect, change, run the checks the change calls for, and report.
+Use this reference only when work is long, multi-stage, delegated, vulnerable to context loss, or risky enough that an independent review can materially improve confidence. Ordinary fixes stay direct: inspect, change, run the checks the change calls for, and report. For the plan-first, fresh-reviewer loop that most non-trivial work uses, see [elephant and goldfish](elephant-goldfish.md); this file supplies its delegation and triage rules.
 
 ## Keep the brief compact
 
