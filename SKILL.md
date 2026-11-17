@@ -58,6 +58,7 @@ Everything else scales with evidence and risk.
 
 - Follow the user's instructions and higher-priority requirements. This skill grants no extra scope, external action, or skipped gate.
 - Inspect the artifact, its real owner, and the affected path before choosing the change. Established components, tokens, and contracts are constraints while they remain fit. The user's accepted decisions are constraints until the user changes them; when one blocks the outcome, say so instead of overriding it.
+- Before release (prototype, alpha, beta), treat recorded design rules as earlier choices with reasons, not vetoes. A rule in the project record, a memory, or a past review decides nothing by itself; every design decision has to win on what works or plays best now. When an old rule blocks a better option, name the rule, argue the merits both ways, and put the choice to the user instead of citing the rule or silently overriding it. Safety, security, privacy, authorization, and data-integrity rules stay binding.
 - Preserve the safety floor defined in engineering judgment. Do not substitute a smaller feature for an explicit request or a lookalike for a canonical asset.
 - Prefer a direct, readable solution. Do not use simplicity to excuse an incomplete migration, caller-only patch, missing state, or known edge case. If the work is already fit, say so and stop.
 - Diagnose scope when the symptom may understate the problem. Local repair, shared-owner correction, structural refactor, staged migration, and replacement are all valid outcomes.
