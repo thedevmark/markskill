@@ -24,6 +24,10 @@ markskill traces behavior through its invariants, callers, data lifecycle, and o
 
 Work that crosses both sides uses one coherent change and a verification plan that fits the change.
 
+## Improvement audits and handoffs
+
+For a codebase audit, markskill scopes the survey, checks findings against their source, and ranks the work with its uncertainty and trade-offs. It can turn selected work into a handoff plan with a recorded baseline, verification, and boundaries, then reconcile that plan as the repository changes. An audit or plan alone does not authorize implementation; when the user asks for the work, markskill can carry it through.
+
 ## Scope check
 
 The claim is "everything the agent builds and ships." Check it against the files instead of trusting this README:
@@ -74,6 +78,8 @@ Ask your agent, in plain language:
 - "Revise the empty states on the dashboard. Distill, don't redesign."
 - "Audit this store screenshot set for slop before I ship it."
 - "Simplify this diff without moving the behavior or deleting its guards."
+- "Audit this repository for the highest-impact issues and prepare handoff plans."
+- "Reconcile our improvement backlog against the current code."
 - "Fast iteration: make this one change, check the affected behavior, and report."
 - "Set up the project record for this repo from what is already here."
 - "Have an independent reviewer grade the billing module and keep going until it gets an A+."
@@ -94,6 +100,7 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 | `references/evidence-and-testing.md` | Evidence lanes and labels, runtime and data claims, claim table, state matrix, stabilization, and reporting |
 | `references/promotional-assets-and-feedback.md` | Store art, thumbnails, social graphics, iterative feedback handling |
 | `references/execution-and-review.md` | Briefs, progress records, delegation and return contracts, independent review, and templates for long or risky work |
+| `references/improvement-audits.md` | Scoped improvement audits, vetted findings, execution-ready handoff plans, and backlog reconciliation |
 | `references/elephant-goldfish.md` | Plan-first loop for most non-trivial work: the context-holding author writes the plan, fresh reviewers check it by lens before and after building; adapted from Google's Elephant-Goldfish Model |
 | `references/graded-review-loop.md` | Opt-in loop for "review it and keep going until it gets an A+": grade scale, triage, measurement, re-review message, fresh confirmation, and stop rules |
 | `evaluations/protocol.md` | Frozen comparison design, task matrix, scoring, critical failures, and claim boundaries |
@@ -109,7 +116,7 @@ It also covers dependency choice, refactoring, migration, delegation, and the si
 
 ## Lineage
 
-markskill grew out of two open skill sets and deliberately stands alone from both. From [superpowers](https://github.com/obra/superpowers) (MIT) it adapts the process discipline: evidence before claims, delegation and review contracts, regression proof by reversion, and naming the excuse at the moment it appears. From [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) it adapts the craft floor: direction contracts, color strategy, typography and motion numbers, native platform conformance, and durable project records. Everything here is rewritten to fit an evidence-led, proportionate framework; nothing is copied verbatim. The parts of both that mandate ceremony on small tasks, numeric scores, fixed loop counts, tooling, or redesign by default were left out on purpose. The graded review loop is the one place a grade appears, and only when the user asks for it.
+markskill draws from open skill sets and stands alone from them. From [superpowers](https://github.com/obra/superpowers) (MIT) it adapts the process discipline: evidence before claims, delegation and review contracts, regression proof by reversion, and naming the excuse at the moment it appears. From [impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) it adapts the craft floor: direction contracts, color strategy, typography and motion numbers, native platform conformance, and durable project records. From [improve](https://github.com/shadcn/improve) (MIT) it adapts source-vetted audits, self-contained handoff plans, and backlog reconciliation. The guidance is rewritten for markskill's evidence-led, proportionate framework. The graded review loop is the one place a grade appears, and only when the user asks for it.
 
 ---
 
