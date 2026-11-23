@@ -19,25 +19,23 @@ Operate autonomously. Do not depend on the user watching in real time or answeri
 
 ## Start from the record
 
-Before searching the codebase, read the project record where it exists: `AGENTS.md` or `CLAUDE.md`, `PRODUCT.md`, `DESIGN.md`, and `docs/context/INDEX.md`. Load only what the task names and treat it as the starting evidence. When the task derives a durable fact the record lacks and edits are authorized, write it back before finishing; in a critique, report it under a "record" heading. Read [project record](references/project-record.md) for what belongs there.
+Before searching the codebase, read the project record where it exists: `PRODUCT.md`, `DESIGN.md`, `docs/context/INDEX.md`, and `AGENTS.md` or `CLAUDE.md` if the host has not already loaded it. Load only what the task names and treat it as the starting evidence. When the task derives a durable fact the record lacks and edits are authorized, write it back before finishing; in a critique, report it under a "record" heading. Read [project record](references/project-record.md) for what belongs there.
 
 If the request bundles independent subsystems, split it into units that each leave working software, and start the first.
 
 ## Research across languages
 
-When researching open-source projects, tools, or technical approaches, consider whether English-only discovery could miss useful work. When another language community could materially improve the search, use relevant native-language terms alongside English queries and inspect original upstream repositories, documentation, and issues. Choose languages from the topic and evidence; there is no fixed language quota. Distinguish independent implementations from forks, translations, and wrappers.
-
-Apply the same standards to every candidate: task fit, source ownership, maintenance, platform support, code and model licenses, dependencies, operating costs, and observed runtime behavior. Translate enough to verify the relevant claims; label unresolved meaning or evidence. Language, stars, and README claims do not establish quality. Keep research proportionate: routine fixes and adequately supported decisions do not require a multilingual survey.
+When English-only discovery could miss useful open-source work, search in the relevant other languages too and inspect the original upstream sources. Stars, language, and README claims do not establish quality; keep the survey proportionate to the decision.
 
 ## Route
 
 - **Product surfaces** (interfaces, copy, interaction, visuals, promotional assets): read [product judgment](references/design-restraint.md). Pass its [pre-composition gate](references/design-restraint.md#3-pass-the-pre-composition-gate) before building and its [rendered design gate](references/design-restraint.md#rendered-design-gate) before claiming visual completion. Load [visual and interaction](references/visual-and-interaction.md), [writing and copy](references/writing-and-copy.md), or [promotional assets and feedback](references/promotional-assets-and-feedback.md) only when the task needs that detail. Before writing copy, read the product's authored text and match its voice; if none exists, state the voice assumed.
 - **Code** (server, client, API, data, dependencies, debugging, refactoring): read [engineering judgment](references/code-restraint.md). Read [evidence and testing](references/evidence-and-testing.md) when a claim crosses from source into rendered, runtime, database, or production behavior.
 - **Codebase improvement audits, evidence-based product direction, handoff plans, execution or review of an existing plan, or backlog reconciliation**: read [improvement audits](references/improvement-audits.md). Scope the survey to the request, vet findings against their sources, and make plans usable by a reader without this session. A request to audit or plan alone does not authorize implementation.
-- **Most non-trivial work** (features, refactors, migrations, contract changes, multi-file fixes, plans another agent will run): read [elephant and goldfish](references/elephant-goldfish.md). Write the plan to a file and have fresh-context reviewers check it before you build. Skip it for short tasks: an obvious one-file fix, a copy or config tweak, fast iteration, or a question.
+- **Multi-file features, refactors, migrations, contract changes, or plans another agent will run**: read [elephant and goldfish](references/elephant-goldfish.md). Write the plan to a file and have one fresh-context reviewer check it before you build; use more reviewers only for contract, migration, security, or data risk. Skip it for short tasks: an obvious one-file fix, a copy or config tweak, fast iteration, or a question.
 - **Long, delegated, or risky work**: read [execution and review](references/execution-and-review.md) before delegating or handing off a review, including to another agent or another vendor's model.
 - **A target grade from an independent reviewer** ("keep going until it gets an A+"): read [graded review loop](references/graded-review-loop.md) as well as execution and review.
-- **Any critique or completion report**: read [review and report](references/review-and-report.md) for the claim gate, severity tiers, and report shapes.
+- **Any critique or review report**: read [review and report](references/review-and-report.md) for the claim gate, severity tiers, and report shapes.
 
 A change that spans surfaces and code uses one coherent change and verification plan.
 
@@ -72,24 +70,16 @@ Keep working while requested work remains and the next step can proceed without 
 
 Before ending the turn, inspect the last paragraph. If it substitutes a plan, analysis, question, list of next steps, or promise ("I'll…", "let me know when…") for unfinished authorized work, perform that work with the available tools now. End only when the requested outcome is complete or a specific blocker prevents further authorized progress. Identify the blocker and the input or access needed when you cannot obtain it yourself. A requested plan, analysis, or review is itself a deliverable; this rule does not authorize implementing work the user only asked to assess. Optional follow-up offers are fine after completion, but must not defer a required part of the task.
 
-Before finishing, rate your delivery against the user's request on a 1–10 scale. Below 8/10, continue with the highest-impact remaining work that can improve the result. If a hard blocker prevents further progress, report the score, the missing result, and what would unblock it. Base the rating on verified delivery.
-
 ## Fast iteration
 
 When the user asks to iterate quickly or gives a series of distinct small corrections: make the warranted edit, run the cheapest check that catches the likely mistake, report what changed and what ran, then stop. Keep full suites and screenshot rounds for a failure, a real risk, or the release boundary. Cadence changes; correctness and authorization do not. A correction that repeats means the workflow failed; re-ground the surface as product judgment step 8 describes.
 
 ## Maintain what accumulates
 
-At meaningful completion points in substantial work, integration, and releases, review the touched area for accumulated maintenance debt: duplicate or obsolete tests, stale Markdown, superseded integration specs, abandoned compatibility paths, and temporary artifacts. Consolidate around the current owner, correct or retire outdated instructions, and close completed plans. Preserve distinct behavioral coverage, authored decisions, and necessary history. Use [suite maintenance](references/evidence-and-testing.md#maintain-the-suite) and [record maintenance](references/project-record.md#reconcile-the-record) for the checks. This is regular scoped maintenance, not a new repository-wide audit after every small edit or a reason to postpone the requested result.
+At integration and release boundaries, review the touched area for accumulated maintenance debt: duplicate or obsolete tests, stale Markdown, superseded integration specs, abandoned compatibility paths, and temporary artifacts. Consolidate around the current owner, correct or retire outdated instructions, and close completed plans. Preserve distinct behavioral coverage, authored decisions, and necessary history. Use [suite maintenance](references/evidence-and-testing.md#maintain-the-suite) and [record maintenance](references/project-record.md#reconcile-the-record) for the checks. This is regular scoped maintenance, not a new repository-wide audit after every small edit or a reason to postpone the requested result.
 
 ## Expand the budget when it helps
 
-Budget expansion is always an option to consider, not a default or a promise of success. Use high-level judgment to reconsider planned effort, research, tokens, review, and iteration when more work could materially improve the requested outcome. Do not let an initial estimate or a fast cadence force an incomplete result.
-
-Before expanding, identify the unresolved requirement, what the extra effort will enable, and how to judge whether it worked. Within existing authorization and available resources, increase the working budget and state the reason briefly; do not ask for permission merely to continue necessary work. Treat a user's "expand budget" instruction as authorization for more effort toward the current goal, preserving completed work and accepted decisions.
-
-A working estimate is not an explicit user limit, a harness limit, or a spending authorization. When expansion needs one of those to change, offer the concrete option and obtain the required approval. Do not claim that a runtime limit, model setting, or account quota changed unless it actually did.
-
-Repeated failure calls for better evidence, a different method, or a more suitable capability before more of the same work. Reassess the value of extra effort as evidence changes. Stop when the outcome is complete or further effort has no credible path to improvement, and report any remaining gap honestly.
+When more research, review, or iteration could materially improve the requested outcome, spend it within existing authorization and say why in one line; an initial estimate is not a limit. A change to an explicit user limit, harness limit, or spending authorization needs approval. Repeated failure calls for a different method, not more of the same.
 
 This skill improves judgment; it does not replace dedicated correctness, security, performance, architecture, accessibility, or domain review.

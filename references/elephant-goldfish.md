@@ -10,7 +10,7 @@ A single long session that interviews the user, designs the change, writes it, a
 
 ## When to use it
 
-Use it for most work: features, refactors, migrations, contract or schema changes, multi-file fixes whose cause is not yet proven, new tools or surfaces, and any plan another session or agent will execute.
+Use it for multi-file features and refactors, migrations, contract or schema changes, multi-file fixes whose cause is not yet proven, new tools or surfaces, and any plan another session or agent will execute.
 
 Skip it for short tasks, where the review costs more than the mistake it could catch:
 
@@ -43,9 +43,9 @@ Each goldfish takes one lens. Give it the lens text, not a persona name.
 
 ## Size the swarm
 
-- **Light pass** (a moderate change in one owner): one goldfish with the zoom-out and readiness lenses together.
-- **Standard** (a feature, refactor, or cross-file change): zoom out, comprehension, critic, and readiness as parallel goldfish.
-- **Heavy** (a cross-owner contract, migration, security boundary, or data risk): the standard set, plus a second zoom-out pass after the plan absorbs the critic's additions, since fixes tend to add complexity. Run duplicate goldfish on the critic lens when recall matters more than cost.
+- **Light pass** (the default: a feature, refactor, or cross-file change): one goldfish with the zoom-out and readiness lenses together.
+- **Standard** (a cross-owner contract, migration, security boundary, or data risk): zoom out, comprehension, critic, and readiness as parallel goldfish.
+- **Heavy** (the riskiest of those, where a miss is costly to recover): the standard set, plus a second zoom-out pass after the plan absorbs the critic's additions, since fixes tend to add complexity. Run duplicate goldfish on the critic lens when recall matters more than cost.
 
 Goldfish are read-only and cheap; still respect [share the machine](execution-and-review.md#share-the-machine).
 
